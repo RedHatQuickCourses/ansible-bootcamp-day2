@@ -1,27 +1,36 @@
-= An Example Quick Course
+= Ansible Boot Camp Day 2
 :navtitle: Home
 
 == Introduction
 
-Course Title: Course title FIXME
+Welcome to Ansible Boot Camp Day 2. This intensive, hands-on course is designed for students to move from being Ansible Users to Ansible Architects.
 
-Description:
-Course description FIXME
+The shared goal is to build an automation environment that is repeatable *through Molecule*, secure and curated *through Private Automation Hub*, and highly available *through OpenShift*. You will be equipped to manage the entire lifecycle of automation—from the first line of a test case to the global deployment of a platform.
 
-Duration: FIXME hours
+Duration: 2 hours
 
 == Objectives
 
 On completing this course, you should be able to:
 
-* Observable, measurable objective...
-* Observable, measurable objective...
-* Observable, measurable objective...
+- Evaluate and Select AAP Topologies: Identify the ideal architectural design (Base, Scaled, or Mesh) for specific enterprise requirements, ensuring low latency and high availability across hybrid-cloud environments.
+
+- Implement Configuration-as-Code (CaC): Apply the "Platform managing the Platform" philosophy by using Ansible playbooks to programmatically configure users, inventories, credentials, and job templates within the Automation Controller.
+
+- Master the Developer Lifecycle: Execute a full content workflow—from local development to production—incorporating Execution Environments (EE), version control integration, and the principles of reusable, modular automation content.
 
 == Prerequisites
 
 This course assumes that you have the following prior experience:
 
-* Course or experience...
-* Course or experience...
-* Course or experience...
+- Basic understanding of Git, Linux, OpenShift and Ansible Automation platform. 
+
+== Contributors
+
+The PTL team acknowledges the valuable contributions of the following Red Hat associates:
+
+- Andrew Block (Distinguished Architect)
+- Walter Bentley (Senior Manager for Ansible Platform Practice)
+- Vinny Valdez (Chief Architect for Automation Domain Specialist)
+- Amrinder Singh (Content Architect)
+- Anna Swicegood (Learning Product Manager)

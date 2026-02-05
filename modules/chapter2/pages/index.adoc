@@ -1,7 +1,14 @@
-= Chapter 2
+= Lab: Ansible Test-Driven Development with Molecule
 
-In this section, we cover... FIXME
+[abstract]
+Learn how Test-Driven Development (TDD) principles can be applied to Ansible automation using Molecule. This lab demonstrates how to write tests before writing code, creating isolated testing environments, and implementing comprehensive testing strategies for Ansible roles that manage PostgreSQL databases in containerized environments.
 
+== Learning Objectives
 
-- Add or remove section entries in the `antora.yaml` file as needed.
-- Ensure you create or delete the corresponding directory for the chapter accordingly.
+After completing this module, you will be able to:
+
+* Understand Test-Driven Development (TDD) principles in automation
+* Set up and configure the Ansible Molecule testing framework
+* Write comprehensive tests for Ansible roles
+* Implement container-based testing environments
+* Validate role functionality in isolated scenarios

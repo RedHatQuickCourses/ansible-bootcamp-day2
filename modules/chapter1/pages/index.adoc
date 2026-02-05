@@ -1,7 +1,16 @@
-= Chapter 1
+= Lab: Managing Ansible Content with Private Automation Hub
 
-In this section, we cover... FIXME
+[abstract]
+We will create a custom Collection, publish it to a Private Automation Hub (PAH), build a custom Execution Environment (EE) from a Red Hat certified base image, and finally, run the automation from Ansible Automation Controller.
 
+Content management is a critical component of enterprise automation. Instead of publishing and retrieving content directly from public sources, automation assets will be sourced from a local and trusted content source. This lab will guide you through the process of creating and publishing Ansible Content Collections to a Private Automation Hub, building custom Execution Environments, and integrating them with Ansible Automation Controller. 
 
-- Add or remove section entries in the `antora.yaml` file as needed.
-- Ensure you create or delete the corresponding directory for the chapter accordingly.
+== Learning Objectives
+
+After completing this module, you will be able to:
+
+* Understand the role and benefits of Private Automation Hub
+* Create and publish custom Ansible Collections
+* Build custom Execution Environments
+* Integrate Collections with Automation Controller
+* Manage content lifecycle in enterprise environments

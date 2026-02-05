@@ -1,3 +1,31 @@
 = Appendix
 
-FIXME: Content for Appendix...
+== Managing Ansible Content with Private Automation Hub
+
+For additional reference and deeper learning:
+
+. https://docs.ansible.com/ansible/latest/galaxy/user_guide.html[Ansible Galaxy User Guide]
+. https://docs.ansible.com/ansible/latest/collections_guide/index.html[Ansible Collections Guide]
+. https://ansible.readthedocs.io/projects/builder/[Ansible Builder Documentation]
+. https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/using_automation_hub/index[Private Automation Hub Documentation]
+
+
+== Ansible Test-Driven Development with Molecule
+
+
+For additional reference and deeper learning:
+
+. https://molecule.readthedocs.io/[Molecule Documentation]
+. https://ansible.readthedocs.io/projects/creator/[Ansible Creator Documentation]
+. https://docs.ansible.com/ansible/latest/collections_guide/index.html[Ansible Collections Guide]
+. https://ansible.readthedocs.io/projects/dev-tools/[Ansible Development Tools]
+
+
+== Ansible Automation Platform on OpenShift
+
+For additional reference and deeper learning: 
+
+. https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/deploying_the_red_hat_ansible_automation_platform_operator_on_openshift/index[AAP Operator Deployment Guide]
+. https://docs.openshift.com/container-platform/latest/operators/understanding/olm/olm-understanding-olm.html[OpenShift Operator Lifecycle Manager]
+. https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/red_hat_ansible_automation_platform_installation_guide/index[Ansible Automation Platform Installation Guide]
+. https://kubernetes.io/docs/concepts/extend-kubernetes/operator/[Kubernetes Operators]
