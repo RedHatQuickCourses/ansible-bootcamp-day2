@@ -1,4 +1,4 @@
-== Conclusion
+= Conclusion
 
 Congratulations! You have successfully implemented Test-Driven Development for Ansible automation by:
 

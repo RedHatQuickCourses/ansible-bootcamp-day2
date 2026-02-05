@@ -1,6 +1,5 @@
 = Lab: Ansible Test-Driven Development with Molecule
 
-[abstract]
 Learn how Test-Driven Development (TDD) principles can be applied to Ansible automation using Molecule. This lab demonstrates how to write tests before writing code, creating isolated testing environments, and implementing comprehensive testing strategies for Ansible roles that manage PostgreSQL databases in containerized environments.
 
 == Learning Objectives

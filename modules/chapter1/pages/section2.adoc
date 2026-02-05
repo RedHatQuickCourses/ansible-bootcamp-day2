@@ -1,4 +1,4 @@
-== Conclusion
+= Conclusion
 
 Congratulations! You have successfully mastered the complete lifecycle of managing Ansible content in enterprise environments:
 

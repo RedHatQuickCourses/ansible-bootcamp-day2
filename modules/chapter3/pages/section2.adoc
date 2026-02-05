@@ -1,4 +1,4 @@
-== Conclusion
+= Conclusion
 
 You have successfully explored Ansible Automation Platform deployment and management on OpenShift including:
 
