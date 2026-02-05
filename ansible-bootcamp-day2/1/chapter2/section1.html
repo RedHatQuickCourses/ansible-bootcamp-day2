@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Section 1 :: FIXME Course Title</title>
+    <title>Untitled :: Ansible Boot Camp Day 2</title>
     <link rel="prev" href="index.html">
-    <link rel="next" href="../chapter3/index.html">
+    <link rel="next" href="section2.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -15,7 +15,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
-      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">FIXME Course Title</a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Ansible Boot Camp Day 2</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -35,7 +35,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">FIXME Course Title</a></h3>
+    <h3 class="title"><a href="../index.html">Ansible Boot Camp Day 2</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -55,16 +55,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter1/index.html">Chapter 1</a>
+    <a class="nav-link" href="../chapter1/index.html">Lab: Managing Ansible Content with Private Automation Hub</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter1/section1.html">section1.adoc</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section2.html">Section 2</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section3.html">Section 3</a>
+    <a class="nav-link" href="../chapter1/section2.html">section2.adoc</a>
   </li>
 </ul>
   </li>
@@ -74,10 +71,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Chapter 2</a>
+    <a class="nav-link" href="index.html">Lab: Ansible Test-Driven Development with Molecule</a>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="section1.html">Section 1</a>
+    <a class="nav-link" href="section1.html">section1.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section2.html">section2.adoc</a>
   </li>
 </ul>
   </li>
@@ -87,13 +87,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter3/index.html">Chapter 3</a>
+    <a class="nav-link" href="../chapter3/index.html">Lab: Ansible Automation Platform on OpenShift</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter3/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter3/section1.html">section1.adoc</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter3/section2.html">Section 2</a>
+    <a class="nav-link" href="../chapter3/section2.html">section2.adoc</a>
   </li>
 </ul>
   </li>
@@ -111,12 +111,12 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">FIXME Course Title</span>
+    <span class="title">Ansible Boot Camp Day 2</span>
     <span class="version">1</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">FIXME Course Title</a>
+      <a class="title" href="../index.html">Ansible Boot Camp Day 2</a>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">1</a>
@@ -134,9 +134,9 @@
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../index.html">FIXME Course Title</a></li>
-    <li><a href="index.html">Chapter 2</a></li>
-    <li><a href="section1.html">Section 1</a></li>
+    <li><a href="../index.html">Ansible Boot Camp Day 2</a></li>
+    <li><a href="index.html">Lab: Ansible Test-Driven Development with Molecule</a></li>
+    <li><a href="section1.html">section1.adoc</a></li>
   </ul>
 </nav>
 </div>
@@ -145,26 +145,679 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Section 1</h1>
+<div class="sect1">
+<h2 id="_1_introduction_test_driven_development_with_molecule"><a class="anchor" href="#_1_introduction_test_driven_development_with_molecule"></a>1: Introduction: Test-Driven Development with Molecule</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank" rel="noopener">Test-Driven Development (TDD)</a> is a software development approach where tests are written before the code they validate. In Ansible automation, <a href="https://ansible.readthedocs.io/projects/molecule" target="_blank" rel="noopener">Ansible Molecule</a> enables this practice by providing a framework for testing roles in isolated environments.</p>
+</div>
+<div class="paragraph">
+<p>Why use Molecule for Ansible roles?</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Create multiple copies of this section as needed.</p>
+<p><strong>Isolated Testing</strong>: Tests run in clean, ephemeral environments, ensuring consistent results.</p>
 </li>
 <li>
-<p>Remove any unnecessary sections or chapter pages.</p>
+<p><strong>Idempotence Verification</strong>: Confirms roles can run multiple times without side effects.</p>
 </li>
 <li>
-<p>Customize the section as appropriate.</p>
+<p><strong>Functional Testing</strong>: Validates that roles actually work as intended, not just that they run.</p>
 </li>
 <li>
-<p>Ensure that each page contains a manageable amount of content.</p>
+<p><strong>CI/CD Integration</strong>: Enables automated testing in pipelines before deployment.</p>
 </li>
 </ul>
 </div>
+<div class="sect2">
+<h3 id="_1_1_learning_objectives"><a class="anchor" href="#_1_1_learning_objectives"></a>1.1: Learning Objectives</h3>
+<div class="paragraph">
+<p>You will write and test an Ansible role that <em>manages</em> a PostgreSQL database running inside a pre-built container. Instead of installing the database software itself, your role will be responsible for creating users and databases within the running service.</p>
+</div>
+<div class="paragraph">
+<p>This lab demonstrates a modern, container-native testing workflow where the Molecule <code>default</code> <a href="https://ansible.readthedocs.io/projects/molecule/getting-started-collections/?h=scenario#component-scenarios-collection-testing-only" target="_blank" rel="noopener">scenario</a> provisions the database container using environment variables, and a separate <code>db_server</code> scenario executes a role to configure the database instance.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_prepare_the_collection"><a class="anchor" href="#_2_prepare_the_collection"></a>2: Prepare the Collection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First, launch your OpenShift Dev Spaces workspace and create the <code>db_server</code> role resource within the <code>my_collection</code> in the <code>my_pah_project</code> directory.</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">cd /projects/devspaces-example/my_pah_project
+ansible-creator add resource role db_server .</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_develop_the_db_server_role"><a class="anchor" href="#_3_develop_the_db_server_role"></a>3: Develop the <code>db_server</code> Role</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since the role assumes that PostgreSQL is already running, its primary task to create a database, user and assign privileges.</p>
+</div>
+<div class="paragraph">
+<p>Modify the files inside <code>roles/db_server/</code> directory to configure PostgreSQL.</p>
+</div>
+<div class="paragraph">
+<p>First, update the <code>roles/db_server/defaults/main.yml</code> file with the following content:</p>
+</div>
+<div class="listingblock execute">
+<div class="title">roles/db_server/defaults/main.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+# defaults file for ansible_bootcamp.my_collection.db_server
+db_server_name: "webapp_prod"
+db_server_user: "webapp_user"
+db_server_password: "SecurePassword123"
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next replace the entire contents of the main task file <code>roles/db_server/tasks/main.yml</code>. Notice there are no installation, initialization, or service management tasks specified.</p>
+</div>
+<div class="listingblock execute">
+<div class="title">roles/db_server/tasks/main.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+# tasks file for ansible_bootcamp.my_collection.db_server
+- name: Create the application database
+  community.postgresql.postgresql_db:
+    name: "{{ db_server_name }}"
+    state: present
+
+- name: Create the application database user
+  community.postgresql.postgresql_user:
+    login_db: "{{ db_server_name }}"
+    name: "{{ db_server_user }}"
+    password: "{{ db_server_password }}"
+    state: present
+
+- name: Grant CONNECT on database to our user
+  community.postgresql.postgresql_privs:
+    login_db: "{{ db_server_name }}"
+    privs: CONNECT
+    type: database
+    obj: "{{ db_server_name }}"
+    roles: "{{ db_server_user }}"
+
+- name: Grant USAGE and CREATE on schema public to our user
+  community.postgresql.postgresql_privs:
+    login_db: "{{ db_server_name }}"
+    privs: ALL
+    type: schema
+    obj: public
+    roles: "{{ db_server_user }}"
+...</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_1_add_argument_specification_for_role_validation"><a class="anchor" href="#_3_1_add_argument_specification_for_role_validation"></a>3.1: Add Argument Specification for Role Validation</h3>
+<div class="paragraph">
+<p>The <a href="https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html#argument-spec" target="_blank" rel="noopener"><code>argument_spec</code> file</a> provides a way to validate role arguments, document their purpose, and define default values. This file is placed in <code>roles/db_server/meta/argument_specs.yml</code> and helps ensure that the role receives the correct parameters.</p>
+</div>
+<div class="sect3">
+<h4 id="_3_1_1_why_use_argument_spec"><a class="anchor" href="#_3_1_1_why_use_argument_spec"></a>3.1.1: Why Use argument_spec?</h4>
+<div class="paragraph">
+<p>The following benefits are provided by using an argument specification file:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Input Validation</strong>: Ensures required parameters are provided and have correct types</p>
+</li>
+<li>
+<p><strong>Documentation</strong>: Self-documenting roles that IDEs and documentation tools can use</p>
+</li>
+<li>
+<p><strong>Error Prevention</strong>: Catches configuration errors early in the execution</p>
+</li>
+<li>
+<p><strong>Better UX</strong>: Provides clear error messages when parameters are missing or invalid</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_1_2_create_the_argument_specs_yml_file"><a class="anchor" href="#_3_1_2_create_the_argument_specs_yml_file"></a>3.1.2: Create the argument_specs.yml File</h3>
+<div class="paragraph">
+<p>Create the argument specification file for the db_server role in <code>roles/db_server/meta/argument_specs.yml</code>:</p>
+</div>
+<div class="listingblock execute">
+<div class="title">roles/db_server/meta/argument_specs.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+# argument spec file for ansible_bootcamp.my_collection.db_server
+argument_specs:
+  main:
+    short_description: "Arguments for the db_server role"
+    description: "This role manages PostgreSQL database users and databases within an existing PostgreSQL instance."
+    author: "Ansible Bootcamp"
+    options:
+      db_server_name:
+        type: "str"
+        description: "The name of the database to create"
+        default: "webapp_prod"
+
+      db_server_user:
+        type: "str"
+        description: "The name of the database user to create"
+        default: "webapp_user"
+
+      db_server_password:
+        type: "str"
+        description: "The password for the database user"
+        default: "SecurePassword123"
+        no_log: true
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This argument specification:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Defines three main options corresponding to your role&#8217;s variables</p>
+</li>
+<li>
+<p>Marks all parameters as required (even though they have defaults)</p>
+</li>
+<li>
+<p>Uses <code>type: "str"</code> for string validation</p>
+</li>
+<li>
+<p>Includes descriptions for documentation purposes</p>
+</li>
+<li>
+<p>Uses <code>no_log: true</code> for the password to prevent it from appearing in logs during execution</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_configure_the_advanced_molecule_scenarios"><a class="anchor" href="#_4_configure_the_advanced_molecule_scenarios"></a>4: Configure the Advanced Molecule Scenarios</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With the <code>db_server</code> role prepared, your task is to use Molecule to implement TDD methodologies. You will create and configure your scenarios in a <code>molecule/</code> directory at the root of the collection.</p>
+</div>
+<div class="sect2">
+<h3 id="_4_1_create_and_configure_the_db_server_component_testing_scenario"><a class="anchor" href="#_4_1_create_and_configure_the_db_server_component_testing_scenario"></a>4.1 Create and Configure the <code>db_server</code> (Component Testing) Scenario</h3>
+<div class="paragraph">
+<p>This scenario performs the actual test of the role.</p>
+</div>
+<div class="paragraph">
+<p>Initialize the new scenario using the <code>molecule init scenario</code> command:</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">molecule init scenario db_server</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With the scenario now created, the next step is to move the scenario to the extensions directory</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mv molecule/db_server extensions/molecule/; rmdir molecule</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next, move the Molecule playbooks into the <code>utils</code> directory for sharing between scenarios.</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mv extensions/molecule/db_server/{converge.yml,create.yml,destroy.yml,verify.yml} extensions/molecule/utils/playbooks/</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When <code>ansible-creator</code> initializes a collection, it creates an example scenario called <code>integration_hello_world</code>. You can safely delete this unused example directory:</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">rm -rf extensions/molecule/integration_hello_world</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The primary logic behind Molecule execution is defined in the <a href="https://ansible.readthedocs.io/projects/molecule/configuration/" target="_blank" rel="noopener"><code>molecule.yml</code></a> configuration file. Replace the contents of <code>extensions/molecule/db_server/molecule.yml</code> with the following configuration:</p>
+</div>
+<div class="listingblock execute">
+<div class="title">extensions/molecule/db_server/molecule.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+dependency:
+  name: galaxy
+  options:
+    requirements-file: ${MOLECULE_SCENARIO_DIRECTORY}/requirements.yml
+driver:
+  name: podman
+platforms:
+  - name: instance
+    image: quay.io/ddaniels/psql16
+    entrypoint: docker-entrypoint.sh
+    container_command: postgres
+    ports:
+      - 5432:5432
+    env:
+      POSTGRES_PASSWORD: AdminSecurePassword123
+      POSTGRES_USER: postgres
+    pre_build_image: true
+    cgroupns_mode: host
+    tmpfs:
+      "/run": "rw,mode=1777"
+      "/tmp": "rw,mode=1777"
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:rw
+provisioner:
+  name: ansible
+  playbooks:
+    cleanup: ../utils/playbooks/cleanup.yml
+    converge: ../utils/playbooks/converge.yml
+    destroy: ../utils/playbooks/destroy.yml
+    prepare: ../utils/playbooks/prepare.yml
+    create: ../utils/playbooks/create.yml
+    verify: ../utils/playbooks/verify.yml
+  inventory:
+    group_vars:
+      all:
+        ansible_connection: containers.podman.podman
+verifier:
+  name: ansible
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create a new <code>requirements.yml</code> file in the <code>extensions/molecule/db_server/</code> directory to specify the required Ansible collections for this scenario:</p>
+</div>
+<div class="listingblock execute">
+<div class="title">extensions/molecule/db_server/requirements.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+collections:
+  - containers.podman
+  - community.postgresql
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The scenario uses shared playbook files for container management and testing. Create the following files in the <code>extensions/molecule/utils/playbooks/</code> directory:</p>
+</div>
+<div class="paragraph">
+<p>The <code>create.yml</code> playbook is responsible for provisioning the test infrastructure. In Molecule&#8217;s testing lifecycle, this is the first phase where containers or virtual machines are created to provide isolated environments for testing.</p>
+</div>
+<div class="listingblock execute">
+<div class="title">extensions/molecule/utils/playbooks/create.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+- name: Create container instances
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create containers from inventory
+      containers.podman.podman_container:
+        name: "{{ item['name'] }}"
+        image: "{{ item['image'] }}"
+        command: "{{ item['container_command'] | default('sleep 1d') }}"
+        privileged: "{{ item['container_privileged'] | default(false) }}"
+        volumes: "{{ item['volumes'] | default(omit) }}"
+        entrypoint: "{{ item['entrypoint'] | default(omit) }}"
+        capabilities: "{{ item['container_capabilities'] | default(omit) }}"
+        systemd: "{{ item['container_systemd'] | default(false) }}"
+        log_driver: "{{ item['container_log_driver'] | default('json-file') }}"
+        env: "{{ item['env'] | default(omit) }}"
+        ports: "{{ item['ports'] }}"
+        state: started
+        user: postgres
+      register: result
+      loop: "{{ molecule_yml.platforms }}"
+
+    - name: Verify containers are running
+      ansible.builtin.include_tasks:
+        file: tasks/create-fail.yml
+      when: &gt;
+        item.container.State.ExitCode != 0 or
+        not item.container.State.Running
+      loop: "{{ result.results }}"
+      loop_control:
+        label: "{{ item.container.Name }}"
+
+    - name: Wait for containers to be ready
+      ansible.builtin.wait_for_connection:
+        timeout: 30
+      delegate_to: "{{ item }}"
+      loop: "{{ ansible_play_batch }}"
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create a new directory called <code>tasks</code> inside <code>extensions/molecule/utils/playbooks/</code> and add the <code>create-fail.yml</code> playbook. This playbook handles failure scenarios during container creation by retrieving and displaying container logs for debugging.</p>
+</div>
+<div class="listingblock execute">
+<div class="title">extensions/molecule/utils/playbooks/tasks/create-fail.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+- name: Retrieve container log
+  ansible.builtin.command:
+    cmd: podman logs {{ item.container.Name }}
+  changed_when: false
+  register: logfile_cmd
+
+- name: Display container log and fail
+  ansible.builtin.fail:
+    msg: |
+      Container {{ item.container.Name }} failed to start properly.
+      Exit Code: {{ item.container.State.ExitCode }}
+      Running: {{ item.container.State.Running }}
+      Log output: {{ logfile_cmd.stdout | default('No logs available') }}
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>prepare.yml</code> playbook handles any pre-testing setup tasks. This optional phase in Molecule allows you to configure the test environment before applying your Ansible role, such as installing dependencies or setting up prerequisites. Create a new file called <code>prepare.yml</code> in the <code>extensions/molecule/utils/playbooks/</code> directory with the following content:</p>
+</div>
+<div class="listingblock execute">
+<div class="title">extensions/molecule/utils/playbooks/prepare.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+- name: Prepare play
+  hosts: molecule
+  gather_facts: false
+  tasks:
+    - name: Molecule | Prepare | Ping hosts
+      ansible.builtin.ping:
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>converge.yml</code> playbook is the core of Molecule testing - it executes your Ansible role against the test infrastructure. This phase applies your automation to verify that the role works correctly and achieves the desired state.</p>
+</div>
+<div class="listingblock execute">
+<div class="title">extensions/molecule/utils/playbooks/converge.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Wait for PostgreSQL to be ready"
+      ansible.builtin.wait_for:
+        host: "{{ ansible_host }}"
+        port: 5432
+        delay: 10  # Time to wait before first check
+        timeout: 120 # Total time to wait before failing
+      delegate_to: localhost
+
+    - name: "Include the db_server role"
+      ansible.builtin.include_role:
+        name: "ansible_bootcamp.my_collection.db_server"
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>verify.yml</code> playbook performs functional testing to validate that your role not only ran successfully, but actually achieved the desired results. This phase includes tests that check database connectivity, verify data persistence, and confirm your automation works end-to-end.</p>
+</div>
+<div class="listingblock execute">
+<div class="title">extensions/molecule/utils/playbooks/verify.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+- name: Verify
+  hosts: all
+  vars:
+    db_server_name: "webapp_prod"
+    db_server_user: "webapp_user"
+    db_server_password: "SecurePassword123"
+  tasks:
+    - name: "FUNCTIONAL TEST: Connect as the new user and create a table"
+      community.postgresql.postgresql_query:
+        login_user: "{{ db_server_user }}"
+        login_password: "{{ db_server_password }}"
+        login_db: "{{ db_server_name }}"
+        query: "CREATE TABLE IF NOT EXISTS molecule_verify (id INT);"
+
+    - name: "FUNCTIONAL TEST: Write data to the new table"
+      community.postgresql.postgresql_query:
+        login_user: "{{ db_server_user }}"
+        login_password: "{{ db_server_password }}"
+        login_db: "{{ db_server_name }}"
+        query: "INSERT INTO molecule_verify (id) VALUES (1);"
+
+    - name: "FUNCTIONAL TEST: Read data back and verify the result"
+      community.postgresql.postgresql_query:
+        login_user: "{{ db_server_user }}"
+        login_password: "{{ db_server_password }}"
+        login_db: "{{ db_server_name }}"
+        query: "SELECT COUNT(*) FROM molecule_verify;"
+      register: query_result
+      changed_when: false
+
+    - name: "Assert that one record was found"
+      ansible.builtin.assert:
+        that:
+          - query_result.query_result[0].count == 1
+        fail_msg: "Verification failed! Expected to find 1 record but found {{ query_result.query_result[0].count }}."
+        success_msg: "Verification successful! The DB user can connect, write, and read."
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>cleanup.yml</code> playbook handles cleanup of temporary files and artifacts created during testing, helping maintain a clean test environment between test runs without destroying the actual test infrastructure. Create a new file called <code>cleanup.yml</code> in the <code>extensions/molecule/utils/playbooks/</code> directory with the following content:</p>
+</div>
+<div class="listingblock execute">
+<div class="title">extensions/molecule/utils/playbooks/cleanup.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+- name: Cleanup container instances
+  hosts: molecule
+  gather_facts: false
+  tasks:
+    - name: Check if container is running
+      containers.podman.podman_container_info:
+        name: "{{ groups['all'] }}"
+      register: container_info
+      delegate_to: localhost
+
+    - name: Remove temporary files from running containers
+      ansible.builtin.file:
+        path: /tmp/molecule_os_info.txt
+        state: absent
+      when:
+        - container_info.containers | length &gt; 0
+        - container_info.containers[0].State.Running
+      failed_when: false
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>destroy.yml</code> playbook tears down the test infrastructure completely. This final phase in Molecule&#8217;s lifecycle ensures that containers, virtual machines, and other test resources are properly cleaned up after testing is complete.</p>
+</div>
+<div class="listingblock execute">
+<div class="title">extensions/molecule/utils/playbooks/destroy.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+- name: Destroy container instances
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Get info for all containers
+      containers.podman.podman_container_info:
+        name: "{{ item['name'] }}"
+      loop: "{{ molecule_yml.platforms }}"
+      register: podman_infos
+
+    - name: Kill container if running
+      containers.podman.podman_container:
+        name: "{{ item.item['name'] }}"
+        state: stopped
+        timeout: 2
+      loop: "{{ podman_infos.results }}"
+      loop_control:
+        label: "{{ item.item }}"
+      when:
+        - item.containers | length &gt; 0
+        - item.containers[0].State.Status == "running"
+
+    - name: Remove container to ensure clean state
+      containers.podman.podman_container:
+        name: "{{ item.item['name'] }}"
+        state: absent
+      loop: "{{ podman_infos.results }}"
+      loop_control:
+        label: "{{ item.item }}"
+      when: item.containers | length &gt; 0
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>noop.yml</code> playbook is a placeholder that performs no operations. It can be used as a template or when you need a playbook that does nothing during specific testing phases.</p>
+</div>
+<div class="listingblock execute">
+<div class="title">extensions/molecule/utils/playbooks/noop.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+- name: No-op
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Run a noop
+      ansible.builtin.debug:
+        msg: "This does nothing!"
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you may have noticed, no changes were required in the <code>noop.yml</code> file.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_additional_molecule_playbooks"><a class="anchor" href="#_additional_molecule_playbooks"></a>Additional Molecule Playbooks</h3>
+<div class="paragraph">
+<p>Molecule supports several other standard playbooks that we haven&#8217;t implemented in this lab:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><code>idempotence.yml</code></strong>: Tests that running your role multiple times produces the same result without unwanted side effects. This verifies that your automation is truly idempotent.</p>
+</li>
+<li>
+<p><strong><code>side_effect.yml</code></strong>: Tests the impact of your role on other parts of the system or external dependencies. Useful for testing integration effects or cross-system interactions.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These additional playbooks can be configured in your <code>molecule.yml</code> file under the <code>provisioner.playbooks</code> section when you need more advanced testing scenarios.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_5_build_and_install_the_collection"><a class="anchor" href="#_step_5_build_and_install_the_collection"></a>Step 5: Build and Install the Collection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before running the molecule tests, you need to build and install the collection so that the role can be found by Ansible.</p>
+</div>
+<div class="paragraph">
+<p>Update the <code>galaxy.yml</code> file to add a dependency on <code>"community.postgresql": "*"</code> and increment the version number to <code>1.0.2</code> as shown below:</p>
+</div>
+<div class="listingblock execute">
+<div class="title">galaxy.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">version: 1.0.2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add the dependency under the <code>dependencies</code> section:</p>
+</div>
+<div class="listingblock execute">
+<div class="title">galaxy.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">dependencies:
+  "community.postgresql": "*"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now build, install, and publish the collection to your Private Automation Hub instance.</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">ansible-galaxy collection build .
+ansible-galaxy collection install ansible_bootcamp-my_collection-1.0.2.tar.gz --force
+ansible-galaxy collection publish -s {aap_controller_web_url}/api/galaxy/ ansible_bootcamp-my_collection-1.0.2.tar.gz --token $PAH_API_TOKEN</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You may see an error similar to <code>NameError: name 'AnsibleFilterError' is not defined</code> during the publishing process. This can be ignored as the collection was still published successfully and available for approval in Private Automation Hub.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Be sure to approve the collection in Private Automation Hub before proceeding to the next step.</p>
+</div>
+<div class="sect2">
+<h3 id="_5_1_understanding_the_test_sequence"><a class="anchor" href="#_5_1_understanding_the_test_sequence"></a>5.1: Understanding the Test Sequence</h3>
+<div class="paragraph">
+<p>Molecule executes a comprehensive test sequence to validate your role:</p>
+</div>
+<div class="paragraph">
+<p><strong>Dependency</strong>: Install required Ansible collections (community.postgresql)</p>
+</div>
+<div class="paragraph">
+<p><strong>Create</strong>: Start an isolated Podman container with UBI9 base image</p>
+</div>
+<div class="paragraph">
+<p><strong>Prepare</strong>: (Optional preparation steps - skipped in this scenario)</p>
+</div>
+<div class="paragraph">
+<p><strong>Converge</strong>: Execute the <code>db_server</code> role to install and configure PostgreSQL</p>
+</div>
+<div class="paragraph">
+<p><strong>Idempotence</strong>: Run the role again to verify no changes occur (ensures safe re-runs)</p>
+</div>
+<div class="paragraph">
+<p><strong>Verify</strong>: Execute functional tests to validate database operations work correctly</p>
+</div>
+<div class="paragraph">
+<p><strong>Destroy</strong>: Clean up the test container</p>
+</div>
+<div class="paragraph">
+<p>The test suite validates that your <code>db_server</code> role successfully installs PostgreSQL, creates the application database and user, and enables functional database operations.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6_run_the_full_test_suite"><a class="anchor" href="#_6_run_the_full_test_suite"></a>6: Run the Full Test Suite!</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Change to the extensions directory and execute the test suite.</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">cd extensions
+molecule test --all</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The entire testing lifecycle will be executed, fully coordinated by Molecule. You should see output indicating each phase of the test sequence, including any assertions or functional test results.</p>
+</div>
+</div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="index.html">Chapter 2</a></span>
-  <span class="next"><a href="../chapter3/index.html">Chapter 3</a></span>
+  <span class="prev"><a href="index.html">Lab: Ansible Test-Driven Development with Molecule</a></span>
+  <span class="next"><a href="section2.html">section2.adoc</a></span>
 </nav>
 </article>
   </div>

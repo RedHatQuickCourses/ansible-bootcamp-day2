@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Section 2 :: FIXME Course Title</title>
+    <title>Untitled :: Ansible Boot Camp Day 2</title>
     <link rel="prev" href="section1.html">
     <link rel="next" href="../appendix/appendix.html">
     <meta name="generator" content="Antora 3.1.3">
@@ -15,7 +15,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
-      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">FIXME Course Title</a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Ansible Boot Camp Day 2</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -35,7 +35,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">FIXME Course Title</a></h3>
+    <h3 class="title"><a href="../index.html">Ansible Boot Camp Day 2</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -55,16 +55,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter1/index.html">Chapter 1</a>
+    <a class="nav-link" href="../chapter1/index.html">Lab: Managing Ansible Content with Private Automation Hub</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter1/section1.html">section1.adoc</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section2.html">Section 2</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section3.html">Section 3</a>
+    <a class="nav-link" href="../chapter1/section2.html">section2.adoc</a>
   </li>
 </ul>
   </li>
@@ -74,10 +71,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter2/index.html">Chapter 2</a>
+    <a class="nav-link" href="../chapter2/index.html">Lab: Ansible Test-Driven Development with Molecule</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter2/section1.html">section1.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section2.html">section2.adoc</a>
   </li>
 </ul>
   </li>
@@ -87,13 +87,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Chapter 3</a>
+    <a class="nav-link" href="index.html">Lab: Ansible Automation Platform on OpenShift</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section1.html">Section 1</a>
+    <a class="nav-link" href="section1.html">section1.adoc</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="section2.html">Section 2</a>
+    <a class="nav-link" href="section2.html">section2.adoc</a>
   </li>
 </ul>
   </li>
@@ -111,12 +111,12 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">FIXME Course Title</span>
+    <span class="title">Ansible Boot Camp Day 2</span>
     <span class="version">1</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">FIXME Course Title</a>
+      <a class="title" href="../index.html">Ansible Boot Camp Day 2</a>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">1</a>
@@ -134,9 +134,9 @@
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../index.html">FIXME Course Title</a></li>
-    <li><a href="index.html">Chapter 3</a></li>
-    <li><a href="section2.html">Section 2</a></li>
+    <li><a href="../index.html">Ansible Boot Camp Day 2</a></li>
+    <li><a href="index.html">Lab: Ansible Automation Platform on OpenShift</a></li>
+    <li><a href="section2.html">section2.adoc</a></li>
   </ul>
 </nav>
 </div>
@@ -145,25 +145,38 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Section 2</h1>
-<div class="ulist">
-<ul>
+<div class="sect1">
+<h2 id="_conclusion"><a class="anchor" href="#_conclusion"></a>Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You have successfully explored Ansible Automation Platform deployment and management on OpenShift including:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Create multiple copies of this section as needed.</p>
+<p>Examined the resources managed by the AAP operator including Deployments, Pods, Secrets, and Routes</p>
 </li>
 <li>
-<p>Remove any unnecessary sections or chapter pages.</p>
+<p>Learned about cluster-scoped vs namespace-scoped operator installations</p>
 </li>
 <li>
-<p>Customize the section as appropriate.</p>
+<p>Deployed a custom AAP instance with specific configurations</p>
 </li>
 <li>
-<p>Ensure that each page contains a manageable amount of content.</p>
+<p>Monitored deployment progress and accessed the newly established platform</p>
 </li>
-</ul>
+<li>
+<p>Understood the various custom resources and their purpose in the AAP ecosystem</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This knowledge prepares you to deploy, manage, and troubleshoot AAP on OpenShift in enterprise environments, leveraging the power of Kubernetes-native automation platform management.</p>
+</div>
+</div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="section1.html">Section 1</a></span>
+  <span class="prev"><a href="section1.html">section1.adoc</a></span>
   <span class="next"><a href="../appendix/appendix.html">Appendix</a></span>
 </nav>
 </article>

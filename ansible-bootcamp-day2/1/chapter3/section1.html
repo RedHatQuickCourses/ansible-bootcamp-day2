@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Section 1 :: FIXME Course Title</title>
+    <title>Untitled :: Ansible Boot Camp Day 2</title>
     <link rel="prev" href="index.html">
     <link rel="next" href="section2.html">
     <meta name="generator" content="Antora 3.1.3">
@@ -15,7 +15,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
-      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">FIXME Course Title</a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Ansible Boot Camp Day 2</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -35,7 +35,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">FIXME Course Title</a></h3>
+    <h3 class="title"><a href="../index.html">Ansible Boot Camp Day 2</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -55,16 +55,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter1/index.html">Chapter 1</a>
+    <a class="nav-link" href="../chapter1/index.html">Lab: Managing Ansible Content with Private Automation Hub</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter1/section1.html">section1.adoc</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section2.html">Section 2</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section3.html">Section 3</a>
+    <a class="nav-link" href="../chapter1/section2.html">section2.adoc</a>
   </li>
 </ul>
   </li>
@@ -74,10 +71,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter2/index.html">Chapter 2</a>
+    <a class="nav-link" href="../chapter2/index.html">Lab: Ansible Test-Driven Development with Molecule</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter2/section1.html">section1.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section2.html">section2.adoc</a>
   </li>
 </ul>
   </li>
@@ -87,13 +87,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Chapter 3</a>
+    <a class="nav-link" href="index.html">Lab: Ansible Automation Platform on OpenShift</a>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="section1.html">Section 1</a>
+    <a class="nav-link" href="section1.html">section1.adoc</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section2.html">Section 2</a>
+    <a class="nav-link" href="section2.html">section2.adoc</a>
   </li>
 </ul>
   </li>
@@ -111,12 +111,12 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">FIXME Course Title</span>
+    <span class="title">Ansible Boot Camp Day 2</span>
     <span class="version">1</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">FIXME Course Title</a>
+      <a class="title" href="../index.html">Ansible Boot Camp Day 2</a>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">1</a>
@@ -134,9 +134,9 @@
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../index.html">FIXME Course Title</a></li>
-    <li><a href="index.html">Chapter 3</a></li>
-    <li><a href="section1.html">Section 1</a></li>
+    <li><a href="../index.html">Ansible Boot Camp Day 2</a></li>
+    <li><a href="index.html">Lab: Ansible Automation Platform on OpenShift</a></li>
+    <li><a href="section1.html">section1.adoc</a></li>
   </ul>
 </nav>
 </div>
@@ -145,26 +145,1189 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Section 1</h1>
+<div class="sect1">
+<h2 id="_1_introduction_why_aap_on_openshift"><a class="anchor" href="#_1_introduction_why_aap_on_openshift"></a>1. Introduction: Why AAP on OpenShift?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Ansible Automation Platform Operator provides cloud-native, push-button deployment of new Ansible Automation Platform instances in your OpenShift environment. The Ansible Automation Platform Operator includes resource types to deploy and manage instances of automation controller and private automation hub. It also includes automation controller job resources for defining and launching jobs inside your automation controller deployments.</p>
+</div>
+<div class="paragraph">
+<p>Deploying Ansible Automation Platform instances with a Kubernetes native operator offers several advantages over launching instances from a playbook deployed on Red Hat OpenShift Container Platform, including upgrades and full lifecycle support for your Red Hat Ansible Automation Platform deployments.</p>
+</div>
+<div class="paragraph">
+<p>More information can be found on the official <a href="https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/installing_on_openshift_container_platform/index" target="_blank" rel="noopener">AAP on OpenShift documentation</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_viewing_the_aap_on_openshift_managed_resources"><a class="anchor" href="#_2_viewing_the_aap_on_openshift_managed_resources"></a>2: Viewing the AAP on OpenShift managed resources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Ansible Automation Platform environment that you have been using thus far is running within your OpenShift cluster. Let&#8217;s click around the OpenShift Web Console and explore what&#8217;s already installed and configured by the operator.</p>
+</div>
+<div class="sect2">
+<h3 id="_2_1_the_installed_operator_and_crds"><a class="anchor" href="#_2_1_the_installed_operator_and_crds"></a>2.1: The installed operator and CRDs</h3>
+<div class="paragraph">
+<p>AAP has been installed in the <code>aap</code> Namespace using an <a href="https://docs.redhat.com/en/documentation/openshift_container_platform/4.19/html-single/operators/index" target="_blank" rel="noopener">Operator</a> and the Operator Lifecycle Manager (OLM). The operator manages several Custom Resource Definitions (CRDs) that define the different components of Ansible Automation Platform.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Launch the <a href="{openshift_cluster_console_url}" target="_blank" rel="noopener">OpenShift Web Console</a></p>
+</li>
+<li>
+<p>Select the <strong>htpasswd_provider</strong> button and use the credentials provided in the <a href="#environment-details.adoc" class="xref unresolved" target="_blank" rel="noopener">Environment Details</a> page to login to the OpenShift console.</p>
+</li>
+<li>
+<p>Navigate to <strong>Operators</strong> &#8594; <strong>Installed Operators</strong></p>
+</li>
+<li>
+<p>From the <em>Project</em> dropdown, ensure <code>aap</code> is selected</p>
+</li>
+<li>
+<p>The <code>Ansible Automation Platform</code> operator is listed and installed within this project.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/installed-operators-aap.png" alt="Installed Operators in the AAP Project">
+</div>
+</div>
+</li>
+<li>
+<p>Click on the <code>Ansible Automation Platform</code> operator which will display all of the resources that are managed by the operator.</p>
+</li>
+<li>
+<p>In the top tab, click on <code>All Instances</code>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-operator-all-instances.png" alt="All Instances of the AAP Operator">
+</div>
+</div>
+</li>
+<li>
+<p>5 instances will be shown, each representing a Custom Resource Definitions (CRDs) managed by the AAP operator:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><code>aap</code> which is an <code>AnsibleAutomationPlatform</code> resources that relates to the Gateway component of AAP.</p>
+</li>
+<li>
+<p><code>aap-controller</code> which is an <code>AnsibleController</code> resource that relates to the Automation Controller component of AAP.</p>
+</li>
+<li>
+<p><code>aap-eda</code> which is an <code>EDA</code> that relates to the Event-Driven Ansible component of AAP.</p>
+</li>
+<li>
+<p><code>aap-hub</code> which is an <code>AutomationHub</code> resource that relates to the Automation Hub component of AAP.</p>
+</li>
+<li>
+<p><code>aap-lightspeed</code> which is an <code>AnsibleLightspeed</code> resource that relates to the Ansible Lightspeed component of AAP.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>AnsibleAutomationPlatform</code> CRD deploys and manages the other CRDs listed above. This makes it simple to deploy all the components of AAP together. The <code>AnsibleAutomationPlatform</code> CRD simply needs to be configured to let the operator know which components of the platform are desired, and how to deploy them, and the operator takes care of the details.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Click the <strong>aap</strong> instance to navigate to the <em>Details</em> page for the <code>AnsibleAutomationPlatform</code> CRD. On this page you can view some of the important resources managed by the <code>AnsibleAutomationPlatform</code> CRD. For instance, secrets, other CRDs, database configurations, etc.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-operator-aap-details.png" alt="AAP Instance Details">
+</div>
+</div>
+<div class="paragraph">
+<p>Next to the <em>Details</em> tab click on <strong>YAML</strong>. This will show you the current YAML specification that defines the CRD. The following depicts the <code>spec</code> key in the YAML definition:</p>
+</div>
+<div class="listingblock execute">
+<div class="title">AnsibleAutomationPlatform CRD Spec</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">  controller:
+    disabled: false
+  eda:
+    disabled: false
+  hub:
+    content:
+      replicas: 1
+    disabled: false
+    file_storage_access_mode: ReadWriteMany
+    file_storage_size: 100Gi
+    file_storage_storage_class: ocs-external-storagecluster-cephfs
+    gunicorn_api_workers: 1
+    gunicorn_content_workers: 1
+    worker:
+      replicas: 1
+  image_pull_policy: IfNotPresent
+  lightspeed:
+    disabled: false
+  no_log: true
+  redis_mode: standalone
+  route_tls_termination_mechanism: Edge</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This <code>spec</code> definition shows us that the <code>controller</code>, <code>eda</code>, <code>hub</code>, and <code>lightspeed</code> components are enabled (<code>disabled: false</code>) and some customizations made to the <code>hub</code> component specifically.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_2_resources_managed_by_the_crds"><a class="anchor" href="#_2_2_resources_managed_by_the_crds"></a>2.2: Resources managed by the CRDs</h3>
+<div class="paragraph">
+<p>Each CRD manages its own set of OpenShift resources that are needed for the component to integrate into the final AAP deployment.</p>
+</div>
+<div class="sect3">
+<h4 id="_2_2_1_deployments"><a class="anchor" href="#_2_2_1_deployments"></a>2.2.1: Deployments</h4>
+<div class="paragraph">
+<p>Each CRD will create and manage <code>Deployment</code> resources that in turn manage the pods and other resources listed below in section 2.2.1.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Workloads</strong> on the left hand navigation &#8594; <strong>Deployments</strong>. You will see a list of created deployments, their pod counts, and other information.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-deployments.png" alt="AAP Deployments">
+</div>
+</div>
+</li>
+<li>
+<p>Click on <strong>aap-controller-task</strong>. Under the <code>Details</code> tab you can see information about the deployment resource such as its owner (Which CRD manages this deployment), associated containers, associated volumes, etc. Feel free to click on the other tabs to view information about the deployment and it&#8217;s associated metrics, YAML definition, pods, etc.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-deployment-details.png" alt="AAP Deployment Details">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_2_2_pods"><a class="anchor" href="#_2_2_2_pods"></a>2.2.2: Pods</h4>
+<div class="paragraph">
+<p>Many pods will be up and running that correlate to the containers running the application pieces of AAP. These pods are ultimately owned by the deployments viewed in the previous section.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Workloads</strong> on the left hand navigation &#8594; <strong>Pods</strong>. You will see a long list of deployed pods and their status, restarts, etc.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-pods.png" alt="AAP Pods">
+</div>
+</div>
+</li>
+<li>
+<p>Click on <strong>aap-controller-task-&lt;id&gt;</strong>. Under the <code>Details</code> tab you can see information related to this pod such as containers, volumes, conditions, etc.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-pod-details.png" alt="AAP Pod Details">
+</div>
+</div>
+</li>
+<li>
+<p>Next to the <code>Details</code> tab, click on the <strong>Logs</strong> tab. Under the <code>Containers</code> drop down, make sure that the <code>aap-controller-task</code> container is selected. Observe how you can view the application logs related to the <code>awx.main.tasks</code> portion of the application. This may be important for troubleshooting while the application is having trouble launching or managing tasks!</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-pod-logs-task.png" alt="AAP Pod Logs - Task Container">
+</div>
+</div>
+</li>
+<li>
+<p>Under the <code>Containers</code> drop down, select the <strong>aap-controller-rsyslog</strong> container. Observe how you now see the logs pertaining to the logging of the application pod. If there are any issues with the <code>awx-rsyslogd</code> or external logging, you may see them here.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-pod-logs-rsyslog.png" alt="AAP Pod Logs - Rsyslog Container">
+</div>
+</div>
+</li>
+<li>
+<p>Next to the <code>Details</code> tab, click on the <strong>Terminal</strong> tab. Under the <code>Containers</code> drop down, make sure that the <code>aap-controller-task</code> container is selected. You now have a direct terminal connection to the running container. Here you can view files, and interact with the running AWX application by running commands such as <code>awx-manage</code>. For example run <code>awx-manage --help</code>:</p>
+<div class="listingblock execute">
+<div class="title">Check AWX Manage Commands</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">sh-4.4$ awx-manage --help
+
+Type 'awx-manage help &lt;subcommand&gt;' for help on a specific subcommand.
+
+Available subcommands:
+
+[auth]
+    changepassword
+...</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You could also get access to the container terminal using the <code>oc</code> Command Line Interface via <code>oc rsh aap-controller-task-&lt;id&gt; -c aap-controller-task</code> as well.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s do a similar exercise, but this time taking a look at the AAP web pods.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Workloads</strong> on the left hand navigation &#8594; <strong>Pods</strong>.</p>
+</li>
+<li>
+<p>Click on <strong>aap-controller-web-&lt;id&gt;</strong></p>
+</li>
+<li>
+<p>Next to the <code>Details</code> tab, click on the <strong>Logs</strong> tab. Under the <code>Containers</code> drop down, make sure that the <code>aap-controller-web</code> container is selected. Observe how you can view the application logs related to the AAP web API. This may be important for troubleshooting while the application is receiving web application requests.</p>
+</li>
+<li>
+<p>Next to the <code>Details</code> tab, click on the <strong>Terminal</strong> tab. Under the <code>Containers</code> drop down, make sure that the <code>aap-controller-web</code> container is selected. You now have a direct terminal connection to the running container. Just like in the task pod example before, here you can view files, and interact with the running AWX application by running commands such as <code>awx-manage</code>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_2_3_persistentvolumeclaims"><a class="anchor" href="#_2_2_3_persistentvolumeclaims"></a>2.2.3: PersistentVolumeClaims</h4>
+<div class="paragraph">
+<p>Some of the deployed components of the AAP operator may require persistent storage of data. Persistent Volume Claims (PVCs) are resources in OpenShift that enable access to persistent storage.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Storage</strong> on the left hand navigation &#8594; <strong>PersistentVolumeClaims</strong>. Here you can view any PVCs and their status, associated PVs, capacity, etc.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-pvcs.png" alt="AAP Persistent Volume Claims">
+</div>
+</div>
+</li>
+<li>
+<p>Click on <strong>aap-hub-file-storage</strong>. Under the details tab you can see more information about the PVC such as its storageClass, capacity, used capacity, access mode, etc.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-pvc-details.png" alt="AAP Persistent Volume Claim Details">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_2_4_configmaps"><a class="anchor" href="#_2_2_4_configmaps"></a>2.2.4: ConfigMaps</h4>
+<div class="paragraph">
+<p>The AAP operator will create and manage <code>ConfigMaps</code> that are used by the application components for storing application settings.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s view the ConfigMap that stores the nginx configuration used by the Automation Controller.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Workloads</strong> on the left hand navigation &#8594;  <strong>ConfigMaps</strong>. Here you can view all ConfigMaps and their size, etc.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-configmaps.png" alt="AAP ConfigMaps">
+</div>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Create multiple copies of this section as needed.</p>
-</li>
-<li>
-<p>Remove any unnecessary sections or chapter pages.</p>
-</li>
-<li>
-<p>Customize the section as appropriate.</p>
-</li>
-<li>
-<p>Ensure that each page contains a manageable amount of content.</p>
+<p>Click on <strong>aap-controller-automationcontroller-configmap</strong>. Under <code>Details</code> we can see information about the ConfigMap such as its owner and its data.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-configmap-details.png" alt="AAP ConfigMap Details">
+</div>
+</div>
 </li>
 </ul>
 </div>
+</li>
+<li>
+<p>Under <code>Data</code> take a look at the different objects that belong to this particular ConfigMap.</p>
+</li>
+<li>
+<p>Look at the <code>nginx_conf</code> object. this is the nginx configuration used for the Automation Controller application.</p>
+</li>
+<li>
+<p>Look at the <code>settings</code> object, this is the <code>settings.py</code> file for the Automation Controller application that is mounted at <code>/etc/tower/settings.py</code>.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The data for each ConfigMap is handled by the AAP operator. Any desired changes to these ConfigMaps should not be performed manually by editing the ConfigMaps. The operator may override any changes applied. If changes to the values of these ConfigMaps are desired, they should be applied by modifying the correct keys underneath the CRD <code>spec</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_2_5_secrets"><a class="anchor" href="#_2_2_5_secrets"></a>2.2.5: Secrets</h4>
+<div class="paragraph">
+<p>The AAP operator will create and manage sensitive values needed by the AAP application as <code>Secrets</code>. These can range from database configuration details, application login password, database encryption keys, application SSL certificates, and others.</p>
+</div>
+<div class="paragraph">
+<p>For instance, when the AAP operator performs its initial deployment, by default. it will create a password for the <code>admin</code> user that can be used to login to the AAP platform once it&#8217;s fully deployed. Let&#8217;s take a look at it now.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Workloads</strong> on the left hand navigation &#8594; <strong>Secrets</strong>. Here you can view any secrets and their type, size, etc.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-secrets.png" alt="AAP Secrets">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on <strong>aap-admin-password</strong>. Under <code>Details</code> we can see information about the secret and its data.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-secret-details.png" alt="AAP Secrets">
+</div>
+</div>
+</li>
+<li>
+<p>Under <code>Data</code> click the <code>Reveal values</code> button to show the hidden password. Go ahead and copy the password as it will be needed in the next section.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_2_6_routes"><a class="anchor" href="#_2_2_6_routes"></a>2.2.6: Routes</h4>
+<div class="paragraph">
+<p>The AAP operator also handles creating the services needed for the application to route traffic internally among its components (<code>Services</code>), and the <code>Routes</code> needed for external access to the web application itself.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s look at the routes that are created.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Networking</strong> on the left hand navigation &#8594; <strong>Routes</strong>. Here you can view each created route and their status, location, etc.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-routes.png" alt="AAP Routes">
+</div>
+</div>
+</li>
+<li>
+<p>Click on <code>aap</code>. Under <code>Details</code> we can see information about the route and it&#8217;s service, certificates, wildcard policies, etc. This route happens to belong to the Gateway component of the AAP Deployment. This is the resource where all API requests get routed through and also where we can access the UI from.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-route-details.png" alt="AAP Route Details">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Under <code>Details</code> and <code>Location</code>, you can see the externally accessible URL which we can use to access the deployed Ansible Automation Platform instance. Click on the link which should look something like {aap_controller_web_url}. A new browser tab should open which will be a login page to AAP. For user type in <code>admin</code> and for the password paste the value copied from the <code>aap-admin-password</code> secret in the previous section.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_2_7_others"><a class="anchor" href="#_2_2_7_others"></a>2.2.7: Others</h4>
+<div class="paragraph">
+<p>Examples of other OpenShift resources that are managed by the operator include, but may not be limited to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>StatefulSets</p>
+</li>
+<li>
+<p>Jobs</p>
+</li>
+<li>
+<p>ReplicaSets</p>
+</li>
+<li>
+<p>HorizontalPodAutoscalers</p>
+</li>
+<li>
+<p>Services</p>
+</li>
+<li>
+<p>Roles</p>
+</li>
+<li>
+<p>RoleBindings</p>
+</li>
+<li>
+<p>ServiceAccounts</p>
+</li>
+<li>
+<p>etc</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_3_operator_manager_pods"><a class="anchor" href="#_2_3_operator_manager_pods"></a>2.3: Operator manager pods</h3>
+<div class="paragraph">
+<p>Another aspect of the AAP operator are the controller manager pods. These pods are deployed via Operator Lifecycle Manager.</p>
+</div>
+<div class="paragraph">
+<p>The purpose of these pods is to automate the process of installing, updating, and managing operators and their associated operands within an OpenShift cluster.</p>
+</div>
+<div class="paragraph">
+<p>These pods are installed when the operator is installed.</p>
+</div>
+<div class="paragraph">
+<p>There are two deployment strategies when installing the AAP operator.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Cluster scoped installation.</p>
+</li>
+<li>
+<p>Namespace scoped installation.</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_2_3_1_cluster_scoped_installation"><a class="anchor" href="#_2_3_1_cluster_scoped_installation"></a>2.3.1: Cluster scoped installation</h4>
+<div class="paragraph">
+<p>With a cluster scoped installation, one set of operator controller manager pods are installed into a specific namespace on the OpenShift cluster.</p>
+</div>
+<div class="paragraph">
+<p>These sets of pods are responsible for managing one or more sets of AAP deployments in separate namespaces.</p>
+</div>
+<div class="paragraph">
+<p>In essence, this single set of operator controller manager pods watches all the namespaces on the cluster for any of the AAP CRDs as described in previously.</p>
+</div>
+<div class="paragraph">
+<p>The benefit of this approach is a single set of operator controller manager pods can manage many AAP deployments on a single cluster, thus less resources are consumed by the operator manager controller pods.</p>
+</div>
+<div class="paragraph">
+<p>The downside is that each deployed instance of AAP on the OpenShift cluster must be on the same AAP version.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_3_2_namespace_scoped_installation"><a class="anchor" href="#_2_3_2_namespace_scoped_installation"></a>2.3.2: Namespace scoped installation</h4>
+<div class="paragraph">
+<p>With a namespace scoped installation, one or more sets of operator controller manager pods are installed into specific namespaces on the OpenShift cluster.</p>
+</div>
+<div class="paragraph">
+<p>Each set of pods is responsible for managing <strong>only</strong> one AAP deployment in the same namespace into which the operator is installed.</p>
+</div>
+<div class="paragraph">
+<p>In essence, there can be as many deployments of the operator controller manager pods each watching and managing a single namespace on the cluster.</p>
+</div>
+<div class="paragraph">
+<p>The benefit of this approach is that each set of operator controller manager pods can be on separate AAP versions and thus, every AAP deployment can be on a separate version and lifecycle.</p>
+</div>
+<div class="paragraph">
+<p>The downside is that each set of operator controller manager pods consumes resources and ultimately, this approach will consume more total resources when deploying many AAP deployments on a single OpenShift cluster.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_3_3_what_operator_strategy_does_this_workshop_use"><a class="anchor" href="#_2_3_3_what_operator_strategy_does_this_workshop_use"></a>2.3.3: What operator strategy does this workshop use?</h4>
+<div class="paragraph">
+<p>The OpenShift workshop environment provided in this lab utilizes namespace scoped operator installations of the AAP operator. This approach allows the student to deploy another working AAP operator onto the same cluster as viewed in the previous section without mixing resources.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_deploy_another_aap_instance_using_the_aap_operator"><a class="anchor" href="#_3_deploy_another_aap_instance_using_the_aap_operator"></a>3. Deploy another AAP instance using the AAP Operator</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that you&#8217;re familiar with different components that are managed by the AAP operator, let&#8217;s try to deploy another instance of AAP onto the same OpenShift cluster.</p>
+</div>
+<div class="paragraph">
+<p>This will demonstrate the steps needed to deploy an instance of the AAP operator and how to make some customizations to the deployment.</p>
+</div>
+<div class="sect2">
+<h3 id="_3_1_create_a_new_namespace"><a class="anchor" href="#_3_1_create_a_new_namespace"></a>3.1: Create a new namespace</h3>
+<div class="paragraph">
+<p>First, create a new project in which the AAP operator can be installed into.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Home</strong> on the left hand navigation &#8594; <strong>Projects</strong>.</p>
+</li>
+<li>
+<p>Click on the <strong>Create Project</strong> button.</p>
+</li>
+<li>
+<p>Fill out the name field with <code>my-aap</code> and hit <strong>Create</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You are now redirected to the <code>Project details</code> page of the newly created project.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-project.png" alt="AAP Project Details">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_2_install_the_operator"><a class="anchor" href="#_3_2_install_the_operator"></a>3.2: Install the operator</h3>
+<div class="paragraph">
+<p>Now that we have a project to work within, install another instance of the AAP operator into this namespace.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Operators</strong> on the left hand navigation &#8594; <strong>OperatorHub</strong>.</p>
+</li>
+<li>
+<p>Underneath <em>All Items</em> use the <code>Filter by keyword&#8230;&#8203;</code> input and enter <code>ansible</code>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-operatorhub.png" alt="AAP OperatorHub">
+</div>
+</div>
+</li>
+<li>
+<p>Click on the <code>Ansible Automation Platform</code> box shown.</p>
+</li>
+<li>
+<p>A dialog box with information about the operator will be shown. Feel free to read details and information about the operator.</p>
+</li>
+<li>
+<p>Underneath <em>Channel</em> select <strong>stable-2.5</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Install</strong> button.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-operator-install.png" alt="AAP Operator Install">
+</div>
+</div>
+<div class="paragraph">
+<p>Another dialog box will be shown with more options.</p>
+</div>
+</li>
+<li>
+<p>The only change that needs to be made is under <em>Installed Namespace</em> select the <strong>Select a Namespace</strong> radio button. Ensure the namespace that was created in the previous step is shown in the dropdown: <code>my-aap</code>.</p>
+</li>
+<li>
+<p>Click the <strong>Install</strong> button.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-operator-install-2.png" alt="AAP Operator Install - Namespace Selection">
+</div>
+</div>
+<div class="paragraph">
+<p>The operator will take moment to install itself into the selected namespace.</p>
+</div>
+</li>
+<li>
+<p>Navigate to <strong>Operators</strong> on the left hand navigation &#8594; <strong>Installed Operators</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Next to the <code>Project:</code> dropdown in the top left, ensure <code>my-aap</code> is the project shown.</p>
+<div class="paragraph">
+<p>Under the list of installed operators you should now see <code>Ansible Automation Platform</code> with a version of <code>2.5.+0.1&#8230;&#8203;</code> and a status of <code>Successful</code>.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-operator-install-success.png" alt="AAP Operator Install Success">
+</div>
+</div>
+<div class="paragraph">
+<p>The operator is now successfully installed into the <code>my-aap</code> namespace using a namespace scoped installation method.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_3_create_a_custom_admin_secret"><a class="anchor" href="#_3_3_create_a_custom_admin_secret"></a>3.3: Create a custom admin secret</h3>
+<div class="paragraph">
+<p>By default, the AAP operator will create a secret containing a random value for the initial admin password used to login to the deployed AAP instance.</p>
+</div>
+<div class="paragraph">
+<p>Instead, we can customize the admin password for AAP by creating an OpenShift <em>Secret</em> and instructing the operator to use the value specified within that secret.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Workloads</strong> on the left hand navigation &#8594; <strong>Secrets</strong>.</p>
+</li>
+<li>
+<p>Click on the <strong>Create</strong> button and select <strong>Key/value secret</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-operator-secret-type.png" alt="AAP Operator Secret Type Selection">
+</div>
+</div>
+</li>
+<li>
+<p>For the <em>Secret name</em>, enter <code>my-aap-admin-secret</code>.</p>
+</li>
+<li>
+<p>For the <em>Key</em> enter <code>password</code>, this is the name of the key that the operator will look for in this secret and <strong>must</strong> be named <code>password</code>.</p>
+</li>
+<li>
+<p>For value enter <code>supersecret</code> or any other value of your choosing.</p>
+</li>
+<li>
+<p>Click the <code>Create</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-operator-secret.png" alt="AAP Operator Secret">
+</div>
+</div>
+<div class="paragraph">
+<p>You are now redirected to the <em>Secret details</em> page of the newly created <em>Secret</em>. This <em>Secret</em> will be referenced in the following section.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_4_deploy_the_operator"><a class="anchor" href="#_3_4_deploy_the_operator"></a>3.4: Deploy the operator</h3>
+<div class="paragraph">
+<p>Deploy a new instance of AAP using the operator.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Operators</strong> on the left hand navigation &#8594; <strong>Installed Operators</strong>.</p>
+</li>
+<li>
+<p>Next to the <code>Project:</code> dropdown in the top left, ensure <code>my-aap</code> is the project shown.</p>
+</li>
+<li>
+<p>Click on the <code>Ansible Automation Platform</code> operator.</p>
+</li>
+<li>
+<p>In the toolbar, click on <code>All instances</code>.</p>
+</li>
+<li>
+<p>Click on the <strong>Create new</strong> button and select <strong>Ansible Automation Platform</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-operator-create-new.png" alt="Create New AAP Instance">
+</div>
+</div>
+<div class="paragraph">
+<p>This will bring up the form view to customize the values of the Ansible Automation Platform deployment.</p>
+</div>
+<div class="paragraph">
+<p>For this exercise, we&#8217;ll use the YAML view and paste a simple snippet in.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on the <code>YAML view</code> radio button.</p>
+</li>
+<li>
+<p>In the code entry field, paste the following YAML values:</p>
+<div class="listingblock execute">
+<div class="title">Custom AAP Deployment</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: aap.ansible.com/v1alpha1
+kind: AnsibleAutomationPlatform
+metadata:
+  name: aap
+  namespace: my-aap
+spec:
+  admin_password_secret: my-aap-admin-secret
+  image_pull_policy: IfNotPresent
+  no_log: false
+  redis_mode: standalone
+  route_tls_termination_mechanism: Edge
+  controller:
+    disabled: false
+  eda:
+    disabled: true
+  hub:
+    disabled: true
+  lightspeed:
+    disabled: true</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Click the <strong>Create</strong> button.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The snippet above is a YAML definition of the <code>AnsibleAutomationPlatform</code> we want the operator to deploy. It specifies that the Gateway and Automation Controller components to be created, but disabling the deployment of Automation Hub, EDA, and Lightspeed.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Notice the value of <code>namespace: my-aap</code> in the snippet above is the name of our created project. In addition, notice <code>admin_password_secret: my-aap-admin-secret</code> specifies the <em>Secret</em> containing the admin password that should be used for the newly created instance.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The operator will now recognize the newly created <code>AnsibleAutomationPlatform</code> resource and begin creating and managing the components until the platform is fully deployed.</p>
+</div>
+<div class="paragraph">
+<p>In the next section, we&#8217;ll take a look at different ways to monitor the progress of the actions the operator is performing.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_5_monitor_the_installation_progress"><a class="anchor" href="#_3_5_monitor_the_installation_progress"></a>3.5: Monitor the installation progress</h3>
+<div class="paragraph">
+<p>There are several ways to monitor the progress of the AAP deployment:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You can track the logs of the operator manager pods for each component by looking at the <code>&lt;component&gt;-controller-operator-manager-&lt;id&gt;</code> pod logs.</p>
+</li>
+<li>
+<p>Deployments, pods, secrets, etc will begin to be created. Feel free to monitor their individual progress.</p>
+</li>
+<li>
+<p>Resources belonging to the custom resource begin to be populated under the <code>Resources</code> tab.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-operator-resources.png" alt="AAP Resources Tab">
+</div>
+</div>
+<div class="paragraph">
+<p>When the <code>AnsibleAutomationPlatform</code> custom resource is successfully deployed, the status of it and the <code>AutomationController</code> instance should show <code>Conditions: Running, Successful</code>.</p>
+</div>
+<div class="paragraph">
+<p>This can be verified by performing the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Operators</strong> on the left hand navigation &#8594; <strong>Installed Operators</strong>.</p>
+</li>
+<li>
+<p>Next to the <code>Project:</code> dropdown in the top left, ensure <code>my-aap</code> is the project shown.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the <code>Ansible Automation Platform</code> operator.</p>
+</li>
+<li>
+<p>In the toolbar click on <code>All instances</code>.</p>
+</li>
+<li>
+<p>Look at what is displayed in the <code>Status</code> column on this page.</p>
+</li>
+<li>
+<p>When the status for both components (<code>aap</code> and <code>aap-controller</code>) shows <code>Conditions: Running, Successful</code>, then proceed to the next section.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It will take about 10 minutes for the AAP deployment to complete.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-running.png" alt="AAP Running Status">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_6_access_the_deployed_instance"><a class="anchor" href="#_3_6_access_the_deployed_instance"></a>3.6: Access the deployed instance</h3>
+<div class="paragraph">
+<p>Now that the operator is showing the AAP instance as being successfully deployed, attempt to access the newly created instance.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Networking</strong> on the left hand navigation &#8594; <strong>Routes</strong>.</p>
+</li>
+<li>
+<p>Click on the <code>Location</code> for the <code>aap</code> route.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>A new browser tab will be opened to the URL resulting in the login page for Ansible Automation Platform being displayed. Enter <code>admin</code> and <code>supersecret</code> if you used the default value within the <em>Secret</em> you created.</p>
+</div>
+<div class="paragraph">
+<p>You&#8217;re now logged into the newly deployed AAP instance!</p>
+</div>
+<div class="paragraph">
+<p>Go ahead and attach a subscription to this deployment by using a service account and password and choosing any valid subscription. Your Red Hat login used for cloud.redhat.com can also be used instead of a service account and should have ample subscriptions to use.</p>
+</div>
+<div class="paragraph">
+<p>Once complete, you will see the AAP dashboard.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The only component of AAP that is currently deployed within this instance is Automation Controller, unlike the previous deployment we have been working with in prior exercises.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_modify_the_existing_deployment"><a class="anchor" href="#_4_modify_the_existing_deployment"></a>4. Modify the existing deployment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The operator will manage the desired state of the created custom resources.</p>
+</div>
+<div class="paragraph">
+<p>For instance, if changes are manually made to operator managed resources, like Deployments, ConfigMaps, etc, then the operator may override those changes and reapply the desired state according the the deployed <code>AnsibleAutomationPlatform</code>, <code>AutomationController</code>, etc .</p>
+</div>
+<div class="paragraph">
+<p>Likewise, if updates are made to already deployed <code>AnsibleAutomationPlatform</code>, <code>AutomationController</code>, etc, than the operator will reconcile already deployed instances and apply the desired configuration automatically.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s demonstrate this assertion by modifying the already created <code>AnsibleAutomationPlatform</code> custom resource to also deploy an instance of Automation Hub and observe how the AAP deployment gets updated.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Operators</strong> on the left hand navigation &#8594; <strong>Installed Operators</strong>.</p>
+</li>
+<li>
+<p>Next to the <code>Project:</code> dropdown in the top left, ensure <code>my-aap</code> is the project shown.</p>
+</li>
+<li>
+<p>Click on the <code>Ansible Automation Platform</code> operator.</p>
+</li>
+<li>
+<p>In the toolbar click on <strong>All instances</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the <strong>aap</strong> named resource.</p>
+</li>
+<li>
+<p>Click on the <strong>YAML</strong> toolbar button.</p>
+</li>
+<li>
+<p>In the code entry field, update the <code>spec</code> key to the following:</p>
+<div class="listingblock execute">
+<div class="title">Custom AAP Deployment</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml"># ... other configuration
+spec:
+  admin_password_secret: my-aap-admin-secret
+  image_pull_policy: IfNotPresent
+  no_log: false
+  redis_mode: standalone
+  route_tls_termination_mechanism: Edge
+  controller:
+    disabled: false
+  eda:
+    disabled: true
+  hub:
+    disabled: false
+    content:
+      replicas: 1
+    file_storage_access_mode: ReadWriteMany
+    file_storage_size: 100Gi
+    file_storage_storage_class: ocs-external-storagecluster-cephfs
+    gunicorn_api_workers: 1
+    gunicorn_content_workers: 1
+    worker:
+      replicas: 1
+  lightspeed:
+    disabled: true
+# ... other configuration</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click the <strong>Save</strong> button.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The only changes made from the originally deployed instance is the contents contained within the <code>hub</code> key. The status of the <code>AnsibleAutomationPlatform</code> custom resource will change to <code>Status: Running</code> while Automation Hub is deploying.</p>
+</div>
+<div class="paragraph">
+<p>When the status of the <code>AutomationHub</code> custom resource named <code>aap-hub</code> shows <code>Conditions: Database-Ready, Automationhub-API-Ready, Automationhub-Operator-Finished-Execution, Automationhub-Web-Ready, Automationhub-Content-Ready, Automationhub-Worker-Ready, Automationhub-Routes-Ready</code>, the Automation Hub component of AAP should be successfully deployed.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Automation Hub will take about 10 minutes to successfully deploy.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-automationhub-status.png" alt="AutomationHub Status">
+</div>
+</div>
+<div class="paragraph">
+<p>Log into the AAP instance again and see that the Automation Hub component of AAP is now deployed.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5_modify_the_default_aap_container_group"><a class="anchor" href="#_5_modify_the_default_aap_container_group"></a>5: Modify the default AAP container group</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The operator deployed AAP instance is pre-configured with a default <a href="https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/using_automation_execution/controller-instance-and-container-groups#controller-container-groups" target="_blank" rel="noopener">Container Group</a>. A container group is an instance group that points to an OpenShift cluster. In this case, the OpenShift cluster that the operator was installed on.</p>
+</div>
+<div class="paragraph">
+<p>By default, the container group is setup to deploy job pods in the same namespace that the <code>AnsibleAutomationPlatform</code> custom resource was created within.</p>
+</div>
+<div class="paragraph">
+<p>AAP allows you to edit the default container group, or create new ones, and modify the Kubernetes request that AAP makes for each job execution.</p>
+</div>
+<div class="paragraph">
+<p>Before we modify the container group, let&#8217;s make a slight configuration change to the AAP deployment that will allow job containers to persist after running. This change allows us to observe the state of job pods after they have completed.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Log into the <a href="https://aap-my-aap.{openshift_cluster_ingress_domain}" target="_blank" rel="noopener">deployed AAP instance</a>.</p>
+</li>
+<li>
+<p>From the navigation menu on the left, expand <strong>Settings</strong> and expand <strong>Automation Execution</strong> and click on <strong>Troubleshooting</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-settings-troubleshooting.png" alt="AAP Automation Execution Settings">
+</div>
+</div>
+</li>
+<li>
+<p>Click on the <strong>Edit</strong> button.</p>
+</li>
+<li>
+<p>Uncheck the <strong>Release Receptor Work</strong> checkbox.</p>
+</li>
+<li>
+<p>Click the <strong>Save</strong> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-receptor-work.png" alt="AAP Receptor Work Setting">
+</div>
+</div>
+<div class="paragraph">
+<p>Now, perform a small modification to the to the default container group on the deployed AAP instance.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Execution</strong> and expand <strong>Infrastructure</strong> and click on <strong>Instance Groups</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-instance-groups.png" alt="AAP Instance Groups">
+</div>
+</div>
+</li>
+<li>
+<p>Click on the <strong>default</strong> container group.</p>
+</li>
+<li>
+<p>Click the <strong>Edit container group</strong> button.</p>
+</li>
+<li>
+<p>Check the <strong>Customize pod spec</strong> option.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>A <code>Pod spec override</code> text box appear once the <em>Customize pod spec</em> option is checked with a lengthy YAML snippet. This represents spec for the Kubernetes API request that is made by AAP each time a job pod is launched.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s modify the spec slightly to add a custom label to each job pod.</p>
+</div>
+<div class="paragraph">
+<p>Edit the <code>metadata</code> key to appear similar to the following:</p>
+</div>
+<div class="listingblock execute">
+<div class="title">Custom AAP Deployment</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml"># ... other configuration
+metadata:
+  namespace: my-aap
+  labels:
+    ansible_job: ''
+    my_label: foobar
+# ... other configuration</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>+
+. Click the <strong>Save container group</strong> button.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-edit-instance-group.png" alt="Update Default Instance Group">
+</div>
+</div>
+<div class="paragraph">
+<p>With the default instance group updated, let&#8217;s run a demo job and observe the job pod that is launched.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Execution</strong> and click on <strong>Templates</strong>.</p>
+</li>
+<li>
+<p>Click on <strong>Demo Job Template</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Launch template</strong> button (rocket icon).</p>
+</li>
+<li>
+<p>Wait for the job to complete.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the Job completes successfully, an OpenShift pod was launched and the ansible playbook was successfully executed within it. Normally, this pod would be terminated and removed upon success of the Job by AAP. However, because we unchecked the <code>Release Receptor Work</code> option previously, this pod will not be removed and will still be available for inspection as needed.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s observe the created job pod in the OpenShift Web Console.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate back to the OpenShift web console.</p>
+</li>
+<li>
+<p>Navigate to <strong>Workloads</strong> on the left hand navigation &#8594; <strong>Pods</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Next to the <code>Project:</code> dropdown in the top left, ensure <code>my-aap</code> is the project shown.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In the filter text box, enter <code>automation-job</code>.</p>
+</li>
+<li>
+<p>Click on the <code>automation-job-&lt;id&gt;-&lt;guid&gt;</code> pod.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-job-pods.png" alt="Job Pods">
+</div>
+</div>
+</li>
+<li>
+<p>Observe the labels attached to this pod under <code>Labels</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You will see the pod has an additional label <code>my_label=foobar</code> as a reslt of the change we performed within the container group YAML spec.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-container-group-pod.png" alt="AAP Container Group Pod Labels">
+</div>
+</div>
+<div class="paragraph">
+<p>This is a very simple example of modifying the container group specification to customize the Kubernetes pod API request. More advanced examples of customizations a user may make for real-world deployments may be:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Launch job Pods in a separate namespace from the core AAP platform Pods.</p>
+</li>
+<li>
+<p>Modify the resource requests and limits of job Pods.</p>
+</li>
+<li>
+<p>Attach volume mounts to each job Pods request.</p>
+</li>
+<li>
+<p>Edit the affinity or anti-affinity of job Pods to certain OpenShift nodes.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This demonstrates how easy and flexible Container Groups can be to manage AAP automation workloads.</p>
+</div>
+</div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="index.html">Chapter 3</a></span>
-  <span class="next"><a href="section2.html">Section 2</a></span>
+  <span class="prev"><a href="index.html">Lab: Ansible Automation Platform on OpenShift</a></span>
+  <span class="next"><a href="section2.html">section2.adoc</a></span>
 </nav>
 </article>
   </div>

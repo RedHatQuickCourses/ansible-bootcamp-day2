@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Section 1 :: FIXME Course Title</title>
+    <title>Untitled :: Ansible Boot Camp Day 2</title>
     <link rel="prev" href="index.html">
     <link rel="next" href="section2.html">
     <meta name="generator" content="Antora 3.1.3">
@@ -15,7 +15,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
-      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">FIXME Course Title</a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Ansible Boot Camp Day 2</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -35,7 +35,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">FIXME Course Title</a></h3>
+    <h3 class="title"><a href="../index.html">Ansible Boot Camp Day 2</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -55,16 +55,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Chapter 1</a>
+    <a class="nav-link" href="index.html">Lab: Managing Ansible Content with Private Automation Hub</a>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="section1.html">Section 1</a>
+    <a class="nav-link" href="section1.html">section1.adoc</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section2.html">Section 2</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section3.html">Section 3</a>
+    <a class="nav-link" href="section2.html">section2.adoc</a>
   </li>
 </ul>
   </li>
@@ -74,10 +71,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter2/index.html">Chapter 2</a>
+    <a class="nav-link" href="../chapter2/index.html">Lab: Ansible Test-Driven Development with Molecule</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter2/section1.html">section1.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section2.html">section2.adoc</a>
   </li>
 </ul>
   </li>
@@ -87,13 +87,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter3/index.html">Chapter 3</a>
+    <a class="nav-link" href="../chapter3/index.html">Lab: Ansible Automation Platform on OpenShift</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter3/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter3/section1.html">section1.adoc</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter3/section2.html">Section 2</a>
+    <a class="nav-link" href="../chapter3/section2.html">section2.adoc</a>
   </li>
 </ul>
   </li>
@@ -111,12 +111,12 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">FIXME Course Title</span>
+    <span class="title">Ansible Boot Camp Day 2</span>
     <span class="version">1</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">FIXME Course Title</a>
+      <a class="title" href="../index.html">Ansible Boot Camp Day 2</a>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">1</a>
@@ -134,9 +134,9 @@
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../index.html">FIXME Course Title</a></li>
-    <li><a href="index.html">Chapter 1</a></li>
-    <li><a href="section1.html">Section 1</a></li>
+    <li><a href="../index.html">Ansible Boot Camp Day 2</a></li>
+    <li><a href="index.html">Lab: Managing Ansible Content with Private Automation Hub</a></li>
+    <li><a href="section1.html">section1.adoc</a></li>
   </ul>
 </nav>
 </div>
@@ -145,26 +145,1355 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Section 1</h1>
-<div class="ulist">
-<ul>
+<div class="sect1">
+<h2 id="_1_introduction_the_role_of_private_automation_hub"><a class="anchor" href="#_1_introduction_the_role_of_private_automation_hub"></a>1. Introduction: The Role of Private Automation Hub</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <a href="https://www.redhat.com/en/technologies/management/ansible/automation-hub" target="_blank" rel="noopener">Private Automation Hub (PAH)</a> acts as a central repository containing curated and trusted automation content. It allows you to manage, share, and control access to a curated set of Execution Environments and Ansible Content Collections.</p>
+</div>
+<div class="sect2">
+<h3 id="_1_1_importance_of_private_automation_hub"><a class="anchor" href="#_1_1_importance_of_private_automation_hub"></a>1.1: Importance of Private Automation Hub?</h3>
+<div class="paragraph">
+<p>Private Automation Hub provides several key benefits for enterprise automation:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Create multiple copies of this section as needed.</p>
+<p>Centralized Control: A single source of truth for all your certified automation content.</p>
 </li>
 <li>
-<p>Remove any unnecessary sections or chapter pages.</p>
+<p>Security &amp; Trust: Ensures that teams are using approved and vetted collections and EEs.</p>
 </li>
 <li>
-<p>Customize the section as appropriate.</p>
+<p>Dependency Management: Simplifies dependency resolution by providing a private, trusted source for collections.</p>
 </li>
 <li>
-<p>Ensure that each page contains a manageable amount of content.</p>
+<p>Scalability: Enables the distribution of automation content across large organizations.</p>
 </li>
-</ul>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_lab_setup_configuring_your_environment"><a class="anchor" href="#_2_lab_setup_configuring_your_environment"></a>2. Lab Setup: Configuring Your Environment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First, let&#8217;s configure the steps that your Dev Spaces environment needs to communicate with your Private Automation Hub.</p>
+</div>
+<div class="sect2">
+<h3 id="_2_1_configure_ansible_to_use_pah_via_environment_variables"><a class="anchor" href="#_2_1_configure_ansible_to_use_pah_via_environment_variables"></a>2.1: Configure Ansible to Use PAH via Environment Variables</h3>
+<div class="paragraph">
+<p>Instead of creating an <em>ansible.cfg</em> configuration file with your secret token that is used to communicate with PAH, we will set environment variables. This is a more secure practice for local development as it prevents tokens from being accidentally committed to source control.</p>
+</div>
+<div class="sect3">
+<h4 id="_2_1_1_obtaining_your_pah_api_token"><a class="anchor" href="#_2_1_1_obtaining_your_pah_api_token"></a>2.1.1: Obtaining Your PAH API Token</h4>
+<div class="paragraph">
+<p>Utilize the following steps to obtain your PAH API token:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Launch the <a href="{aap_controller_web_url}" target="_blank" rel="noopener">Private Automation Hub</a> web interface and login using the credentials from the <a href="#environment-details.adoc" class="xref unresolved" target="_blank" rel="noopener">Environment Details</a> page.</p>
+</li>
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Content</strong> and click on <strong>API Token</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/api-token-overview.png" alt="API Token Overview">
+</div>
+</div>
+</li>
+<li>
+<p>On the API Token page, click the <strong>Generate token</strong> button. Your API token will be displayed.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/api-token-generate.png" alt="Generate an API Token">
+</div>
+</div>
+</li>
+<li>
+<p>Click the Copy to clipboard icon to copy it.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/api-token-copy.png" alt="Copy the API Token">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Make sure to store the token securely, as it will not be displayed again.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_step_2_1_3_set_environment_variables"><a class="anchor" href="#_step_2_1_3_set_environment_variables"></a>Step 2.1.3: Set Environment Variables</h4>
+<div class="paragraph">
+<p>In your Dev Spaces terminal, run the following commands. These variables will configure <code>ansible-galaxy</code> and <code>ansible-builder</code> to use your PAH instance to pull and push collections and execution environments.</p>
+</div>
+<div class="paragraph">
+<p>First, set a new variable for your PAH API Token created previously</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">export PAH_API_TOKEN='YOUR_API_TOKEN_HERE'</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Replace <code>YOUR_API_TOKEN_HERE</code> With the personal API token you just copied from PAH.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Next, set the environment variables for Ansible to communicate with PAH.</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># Set the list of servers Ansible should know about
+export ANSIBLE_GALAXY_SERVER_LIST='published,certified,validated,community'
+
+# Configure the 'published' repository
+export ANSIBLE_GALAXY_SERVER_PUBLISHED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/published/'
+export ANSIBLE_GALAXY_SERVER_PUBLISHED_TOKEN=$PAH_API_TOKEN
+
+# Configure the 'certified' repository
+export ANSIBLE_GALAXY_SERVER_CERTIFIED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/rh-certified/'
+export ANSIBLE_GALAXY_SERVER_CERTIFIED_TOKEN=$PAH_API_TOKEN
+
+# Configure the 'validated' repository
+export ANSIBLE_GALAXY_SERVER_VALIDATED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/validated/'
+export ANSIBLE_GALAXY_SERVER_VALIDATED_TOKEN=$PAH_API_TOKEN
+
+# Configure the 'community' repository
+export ANSIBLE_GALAXY_SERVER_COMMUNITY_URL='{aap_controller_web_url}/pulp_ansible/galaxy/community/'
+export ANSIBLE_GALAXY_SERVER_COMMUNITY_TOKEN=$PAH_API_TOKEN</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_creating_and_publishing_a_custom_collection"><a class="anchor" href="#_3_creating_and_publishing_a_custom_collection"></a>3. Creating and Publishing a Custom Collection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now, let&#8217;s use <code>ansible-creator</code> to scaffold a new collection.</p>
+</div>
+<div class="sect2">
+<h3 id="_3_1_initialize_the_collection_with_ansible_creator"><a class="anchor" href="#_3_1_initialize_the_collection_with_ansible_creator"></a>3.1: Initialize the Collection with ansible-creator</h3>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># Create a main project directory
+mkdir my_pah_project
+cd my_pah_project
+
+# Initialize the collection structure using ansible-creator
+ansible-creator init ansible_bootcamp.my_collection --init-path ./</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Update the <code>galaxy.yml</code> file and remove <code>ansible.utils</code> from the list of <code>dependencies</code> so that the <code>dependencies</code> properties appears as follows:</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">dependencies: {}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_2_publishing_collections"><a class="anchor" href="#_3_2_publishing_collections"></a>3.2: Publishing Collections</h3>
+<div class="paragraph">
+<p>Publishing a Collection makes it available in PAH for use in Automation Controller and other tools. To publish a collection, a <em>namespace</em> must exist in PAH for which the collection can be built and then published.</p>
+</div>
+<div class="sect3">
+<h4 id="_3_2_1_creating_namespace_for_collection"><a class="anchor" href="#_3_2_1_creating_namespace_for_collection"></a>3.2.1: Creating namespace for collection</h4>
+<div class="paragraph">
+<p>Create a new <em>Namespace</em> in PAH.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Launch the <a href="{aap_controller_web_url}" target="_blank" rel="noopener">Private Automation Hub</a> web interface and login using the credentials from the <a href="#environment-details.adoc" class="xref unresolved" target="_blank" rel="noopener">Environment Details</a> page.</p>
+</li>
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Content</strong> and click on <strong>Namespaces</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/navigate-namespaces.png" alt="Namespaces navigation">
+</div>
+</div>
+</li>
+<li>
+<p>Click on the <strong>Create Namespace</strong> button.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/namespaces-overview.png" alt="Namespaces overview">
+</div>
+</div>
+</li>
+<li>
+<p>Enter <code>ansible_bootcamp</code> for the name. The rest of the values can be left blank</p>
+</li>
+<li>
+<p>Click <strong>Create Namespace</strong> to create the namespace.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/create-namespace.png" alt="Namespace creation form">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_3_build_and_publish_the_collection"><a class="anchor" href="#_3_3_build_and_publish_the_collection"></a>3.3: Build and Publish the Collection</h3>
+<div class="paragraph">
+<p>Now that a namespace exists, we can build and publish our collection to PAH.</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># Build your custom collection
+ansible-galaxy collection build
+
+# Publish the collection to PAH
+ansible-galaxy collection publish -s {aap_controller_web_url}/api/galaxy/ ansible_bootcamp-my_collection-1.0.0.tar.gz --token $PAH_API_TOKEN</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You can safely ignore any warnings that may be emitted during the publishing process.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Once your collection has been published, it must be approved before it is available for use.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Launch the <a href="{aap_controller_web_url}" target="_blank" rel="noopener">Private Automation Hub</a> web interface and login using the credentials from the <a href="#environment-details.adoc" class="xref unresolved" target="_blank" rel="noopener">Environment Details</a> page.</p>
+</li>
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Content</strong> and click on <strong>Collection Approvals</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/collection-approvals-overview.png" alt="Collection Approvals overview">
+</div>
+</div>
+</li>
+<li>
+<p>The <code>ansible_bootcamp.my_collection</code> should be listed as pending approval. Click the <strong>Thumbs Up</strong> icon to approve and sign the collection.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/collections-approvals-pending.png" alt="Approve the Collection">
+</div>
+</div>
+</li>
+<li>
+<p>Select the <em>Yes, I confirm that I want to approve these 1 collections.</em> checkbox and click <strong>Approve collections</strong> button.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/collections-approvals-approve-collection.png" alt="Pending Approval Collection">
+</div>
+</div>
+</li>
+<li>
+<p>Navigate to the <strong>Collections</strong> page in PAH to verify that your collection is published and available.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/navigate-collections.png" alt="Navigate to Collections">
+</div>
+</div>
+</li>
+<li>
+<p>You should see your <code>ansible_bootcamp.my_collection</code> listed and available for use.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/pah-collections.png" alt="PAH Collections">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_syncing_a_base_ee_from_the_red_hat_registry"><a class="anchor" href="#_4_syncing_a_base_ee_from_the_red_hat_registry"></a>4: Syncing a Base EE from the Red Hat Registry</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before producing our own Execution Environment (EE) in subsequent steps, we&#8217;ll configure PAH to pull in a certified base image from Red Hat. Since AAP images within the Red Hat Container Registry are private, we need to configure a credential within PATH to allow for the retrieval of images.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Launch the <a href="{aap_controller_web_url}" target="_blank" rel="noopener">Private Automation Hub</a> web interface and login using the credentials from the <a href="#environment-details.adoc" class="xref unresolved" target="_blank" rel="noopener">Environment Details</a> page.</p>
+</li>
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Content</strong> and click on <strong>Remote Registries</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/remote-registries-overview.png" alt="Navigate to Remote Registries">
+</div>
+</div>
+</li>
+<li>
+<p>Click the <strong>Create remote registry</strong> button</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/create-remote-registry.png" alt="Create Remote Registry">
+</div>
+</div>
+</li>
+<li>
+<p>Enter the following details on the <em>Create Remote Registry</em> page:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Name: <code>redhat</code></p>
+</li>
+<li>
+<p>URL: <code><a href="https://registry.redhat.io" class="bare">https://registry.redhat.io</a></code></p>
+</li>
+<li>
+<p>Username: <code>YOUR_REDHAT_USERNAME</code></p>
+</li>
+<li>
+<p>Password: <code>YOUR_REDHAT_PASSWORD</code></p>
+</li>
+<li>
+<p>Click <strong>Create remote registry</strong> to add the new registry.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/create-remote-registry-details.png" alt="Create Remote Registry Details">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You can <a href="https://access.redhat.com/terms-based-registry" target="_blank" rel="noopener">Create Service Account Credentials</a> in the Red Hat Customer Portal to simplify the management and access to the Red Hat Container Catalog.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Now that details related to the Red Hat Container Registry have been added, configure PAH to sync the <code>ee-minimal-rhel9</code> image</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Content</strong> and click on <strong>Execution Environments</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/execution-environments-navigate.png" alt="Navigate to Execution Environments">
+</div>
+</div>
+</li>
+<li>
+<p>Click the <strong>Create execution environment</strong> button.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/create-execution-environment.png" alt="Create Execution Environment">
+</div>
+</div>
+</li>
+<li>
+<p>Enter the following details on the <em>Create Execution Environment</em> page:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Name: <code>ansible-automation-platform-25/ee-minimal-rhel9</code></p>
+</li>
+<li>
+<p>Upstream Name: <code>ansible-automation-platform-25/ee-minimal-rhel9</code></p>
+</li>
+<li>
+<p>Remote Registry: <code>redhat</code></p>
+</li>
+<li>
+<p>To reduce the sync time and storage requirements, enter <code>latest</code> in the <em>Add tag(s) to include</em> field and click <strong>Add</strong></p>
+</li>
+<li>
+<p>Click the <strong>Create execution environment</strong> button to create the new EE.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/create-execution-environment-form.png" alt="Create Execution Environments Form">
+</div>
+</div>
+<div class="paragraph">
+<p>Synchronize the Execution Environment into PAH from the Red Hat Container Registry.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Next to the <code>ansible-automation-platform-25/ee-minimal-rhel9</code> Execution Environment, click the kebab menu (three vertical dots) on the right hand side of the entry and select <strong>Sync execution environment</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/execution-environment-sync.png" alt="Sync Execution Environment">
+</div>
+</div>
+</li>
+<li>
+<p>Click the checkbox next to the <em>Yes, I confirm I want to sync these 1 execution environments</em>.  the box to confirm and click <strong>Sync execution environment</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Sync Execution Environments</strong> button to start the synchronization process.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/execution-environment-confirm-sync.png" alt="Confirm Sync Execution Environment">
+</div>
+</div>
+<div class="paragraph">
+<p>After the sync is complete, the <code>ee-minimal-rhel9</code> image will be available in your Private Automation Hub instance. Feel free to explore the details of the newly synchronized Execution Environment as you see fit.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5_push_collection_to_repository"><a class="anchor" href="#_5_push_collection_to_repository"></a>5: Push Collection to Repository</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After we&#8217;ve published our collection to Private Automation Hub, the next step is to save our work into your lab&#8217;s Gitea instance.</p>
+</div>
+<div class="sect2">
+<h3 id="_5_1_create_gitea_repository"><a class="anchor" href="#_5_1_create_gitea_repository"></a>5.1: Create Gitea Repository</h3>
+<div class="paragraph">
+<p>Create a new repository in your Gitea instance to hold the collection code using the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to your <a href="{gitea_console_url}" target="_blank" rel="noopener">Gitea instance</a> and click the <strong>Sign In</strong> button on the upper right hand corner</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/gitea-homepage.png" alt="Gitea Homepages">
+</div>
+</div>
+</li>
+<li>
+<p>Enter the username and password using the credentials provided from the <a href="#environment-details.adoc" class="xref unresolved" target="_blank" rel="noopener">Environment Details</a> page and click the <strong>Sign In</strong> button</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/gitea-login.png" alt="Gitea Login Page">
+</div>
+</div>
+</li>
+<li>
+<p>Once authenticated, in the top left of the web interface, click on the <strong>+</strong> symbol and select <strong>New Repository</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/gitea-navigate-new-repository.png" alt="Navigate to new Gitea Repository">
+</div>
+</div>
+</li>
+<li>
+<p>On the New Repository page, enter 'ansible_bootcamp_my_collection' in the Repository Name field.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/gitea-new-repository-name.png" alt="Gitea New Repository">
+</div>
+</div>
+</li>
+<li>
+<p>Leave everything else as default and click on the button at the bottom, <strong>Create Repository</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/gitea-create-repository.png" alt="Gitea Create Repository">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_2_append_to_the_gitignore_file"><a class="anchor" href="#_5_2_append_to_the_gitignore_file"></a>5.2: Append to the <code>.gitignore</code> file</h4>
+<div class="paragraph">
+<p>Back in your Dev Spaces instance, update the <code>.gitignore</code> file within the <code>my_pah_project</code> directory containing the <code>my_collection</code> collection and append the following lines to exclude files that should not be committed to the repository.</p>
+</div>
+<div class="listingblock execute">
+<div class="title">.gitignore</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">context/
+.password
+ansible.cfg
+.vscode/
+*.tar.gz
+*.json</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_3_push_collection_to_new_repository"><a class="anchor" href="#_5_3_push_collection_to_new_repository"></a>5.3: Push collection to new repository</h3>
+<div class="paragraph">
+<p>After an empty repository is created on your Gitea instance, the next step is to push the collection to the repository.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to the <a href="{gitea_console_url}/{gitea_user}/ansible_bootcamp_my_collection" target="_blank" rel="noopener">ansible_bootcamp_my_collection</a> repository.</p>
+</li>
+<li>
+<p>In the section <em>Clone this repository</em>, click the <strong>Copy URL</strong> icon on the far right to copy Gitea repository URL for the <em>HTTPS</em> protocol option.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Now, from within the the terminal of your Dev Spaces instance, within the 'my_pah_project' directory, execute the following commands to initialize a new Git repository and push the content to the Gitea repository.</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git init
+git checkout -b main
+git add --all
+git commit -m "Uploading collection on initial commit"
+git remote add origin {gitea_console_url}/{gitea_user}/ansible_bootcamp_my_collection.git
+git push -u origin main</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since the repository requires authentication, you will be prompted to enter your Gitea username and password at the top of the Dev Spaces window.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/devspaces-git-auth.png" alt="Gitea Repository Containing Collection Content">
+</div>
+</div>
+<div class="paragraph">
+<p>Once the credentials have been entered, the push operation will proceed in your terminal with a result similar to the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Enumerating objects: 83, done.
+Counting objects: 100% (83/83), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (60/60), done.
+Writing objects: 100% (83/83), 31.42 KiB | 3.14 MiB/s, done.
+Total 83 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: . Processing 1 references
+remote: Processed 1 references in total
+To {gitea_console_url}/{gitea_user}/ansible_bootcamp_my_collection.git
+ * [new branch]      main -&gt; main
+branch 'main' set up to track 'origin/main'.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Refresh the <code>ansible_bootcamp_my_collection</code> page within the Gitea UI to confirm that the collection has been published successfully.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/gitea-repository.png" alt="Dev Spaces Git Authentication">
+</div>
+</div>
+<div class="paragraph">
+<p>The repository will be referenced later in the Ansible Bootcamp Lab: <a href="#06-ansible-cicd.adoc" class="xref unresolved">Creating a CI/CD Pipeline</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6_building_a_custom_execution_environment"><a class="anchor" href="#_6_building_a_custom_execution_environment"></a>6: Building a Custom Execution Environment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now, we&#8217;ll define and build a custom Execution Environment (EE) that uses our synced minimal image and our custom collection.</p>
+</div>
+<div class="sect2">
+<h3 id="_6_1_define_the_execution_environment"><a class="anchor" href="#_6_1_define_the_execution_environment"></a>6.1: Define the Execution Environment</h3>
+<div class="paragraph">
+<p>Create a file named <code>execution-environment.yml</code> at the root of the <code>my_pah_project</code> directory with the following content.</p>
+</div>
+<div class="listingblock execute">
+<div class="title">execution-environment.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+version: 3
+
+images:
+  base_image:
+    name: aap-aap.{openshift_cluster_ingress_domain}/ansible-automation-platform-25/ee-minimal-rhel9:latest
+
+dependencies:
+  ansible_core:
+    package_pip: ansible-core==2.16.14
+  galaxy:
+    collections:
+      - name: ansible_bootcamp.my_collection
+        version: 1.0.0
+options:
+  package_manager_path: /usr/bin/microdnf
+
+additional_build_steps:
+  prepend_galaxy:
+    - ARG TOKEN
+    - ENV ANSIBLE_GALAXY_SERVER_LIST='published,certified,validated,community'
+    - ENV ANSIBLE_GALAXY_SERVER_CERTIFIED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/rh-certified/'
+    - ENV ANSIBLE_GALAXY_SERVER_CERTIFIED_TOKEN=$TOKEN
+    - ENV ANSIBLE_GALAXY_SERVER_VALIDATED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/validated/'
+    - ENV ANSIBLE_GALAXY_SERVER_VALIDATED_TOKEN=$TOKEN
+    - ENV ANSIBLE_GALAXY_SERVER_COMMUNITY_URL='{aap_controller_web_url}/pulp_ansible/galaxy/community/'
+    - ENV ANSIBLE_GALAXY_SERVER_COMMUNITY_TOKEN=$TOKEN
+    - ENV ANSIBLE_GALAXY_SERVER_PUBLISHED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/published/'
+    - ENV ANSIBLE_GALAXY_SERVER_PUBLISHED_TOKEN=$TOKEN</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_6_2_build_and_publish_the_execution_environment"><a class="anchor" href="#_6_2_build_and_publish_the_execution_environment"></a>6.2: Build and Publish the Execution Environment</h3>
+<div class="paragraph">
+<p>Login to your PAH container registry, build the custom Execution Environment, and push the resulting image to your PAH instance using the following commands:</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># Log in to your PAH container registry with your AAP user credentials
+podman login aap-aap.{openshift_cluster_ingress_domain}
+
+# Build the EE. It will pull the base from PAH, then add our content.
+ansible-builder build --tag my-pah-ee:1.0 --build-arg TOKEN=$PAH_API_TOKEN
+
+# Tag and push the image to your PAH registry
+podman tag localhost/my-pah-ee:1.0 aap-aap.{openshift_cluster_ingress_domain}/my-pah-ee:1.0
+podman push aap-aap.{openshift_cluster_ingress_domain}/my-pah-ee:1.0</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>$PAH_API_TOKEN</code> environment variable was set previously containing the value of the API Token from PAH. Set this variable once again if your terminal session has been restarted.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_7_adding_a_custom_filter_plugin"><a class="anchor" href="#_7_adding_a_custom_filter_plugin"></a>7: Adding a Custom Filter Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that we have a working EE, let&#8217;s iterate by adding a custom <a href="https://docs.ansible.com/ansible/latest/plugins/filter.html" target="_blank" rel="noopener">Filter plugin</a> to our collection.</p>
+</div>
+<div class="sect2">
+<h3 id="_7_1_create_the_custom_filter_plugin"><a class="anchor" href="#_7_1_create_the_custom_filter_plugin"></a>7.1: Create the Custom Filter Plugin</h3>
+<div class="paragraph">
+<p>Create the file at <code>plugins/filter/cowsay_filter.py</code> with the following content:</p>
+</div>
+<div class="listingblock execute">
+<div class="title">plugins/filter/cowsay_filter.py</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from __future__ import (absolute_import, division, print_function)
+__metaclass__ = type
+
+DOCUMENTATION = '''
+    name: cowsay
+    short_description: A filter to wrap text in a cowsay bubble.
+    description:
+        - This filter takes a string and returns it formatted by the cowsay library.
+    requirements:
+      - The `cowsay` python library must be installed.
+'''
+
+try:
+    import cowsay
+except ImportError:
+    cowsay = None
+
+def cowsay_filter(text):
+    if not cowsay:
+        raise AnsibleFilterError("The 'cowsay' Python library is not installed. Cannot use filter.")
+    return cowsay.cow(text)
+
+class FilterModule(object):
+    def filters(self):
+        return {
+            'cowsay': cowsay_filter
+        }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_7_2_update_the_ee_definition_for_the_plugin_dependency"><a class="anchor" href="#_step_7_2_update_the_ee_definition_for_the_plugin_dependency"></a>Step 7.2: Update the EE Definition for the Plugin Dependency</h3>
+<div class="paragraph">
+<p>Our new plugin requires the <a href="https://pypi.org/project/cowsay/" target="_blank" rel="noopener">cowsay Python library</a>, and we need to ensure our EE is pulling the new version of our collection. Modify the <code>execution-environment.yml</code> to include both changes.</p>
+</div>
+<div class="listingblock execute">
+<div class="title">execution-environment.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+version: 3
+
+images:
+  base_image:
+    name: aap-aap.{openshift_cluster_ingress_domain}/ansible-automation-platform-25/ee-minimal-rhel9:latest
+
+dependencies:
+  ansible_core:
+    package_pip: ansible-core==2.16.14
+  galaxy:
+    collections:
+      - name: ansible_bootcamp.my_collection
+        version: 1.0.1
+  python:
+    - cowsay
+options:
+  package_manager_path: /usr/bin/microdnf
+
+additional_build_steps:
+  prepend_galaxy:
+    - ARG TOKEN
+    - ENV ANSIBLE_GALAXY_SERVER_LIST='published,certified,validated,community'
+    - ENV ANSIBLE_GALAXY_SERVER_CERTIFIED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/rh-certified/'
+    - ENV ANSIBLE_GALAXY_SERVER_CERTIFIED_TOKEN=$TOKEN
+    - ENV ANSIBLE_GALAXY_SERVER_VALIDATED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/validated/'
+    - ENV ANSIBLE_GALAXY_SERVER_VALIDATED_TOKEN=$TOKEN
+    - ENV ANSIBLE_GALAXY_SERVER_COMMUNITY_URL='{aap_controller_web_url}/pulp_ansible/galaxy/community/'
+    - ENV ANSIBLE_GALAXY_SERVER_COMMUNITY_TOKEN=$TOKEN
+    - ENV ANSIBLE_GALAXY_SERVER_PUBLISHED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/published/'
+    - ENV ANSIBLE_GALAXY_SERVER_PUBLISHED_TOKEN=$TOKEN</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_7_3_increment_version_and_republish"><a class="anchor" href="#_7_3_increment_version_and_republish"></a>7.3: Increment Version and Republish</h3>
+<div class="paragraph">
+<p>Now, we publish a new version of the collection and a new version of the EE that includes the updated collection and dependency.</p>
+</div>
+<div class="paragraph">
+<p>First, edit <code>galaxy.yml</code> and change the version from <code>1.0.0</code> to <code>1.0.1</code>.</p>
+</div>
+<div class="paragraph">
+<p>Then, run the following commands:</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># Rebuild and republish the collection
+ansible-galaxy collection build
+ansible-galaxy collection publish -s {aap_controller_web_url}/api/galaxy/ ansible_bootcamp-my_collection-1.0.1.tar.gz --token $PAH_API_TOKEN</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Make sure to Approve collection in the PAH web interface as described previously.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Finally, build and push the new EE version:</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># Rebuild and republish the EE with a new version tag
+ansible-builder build --tag my-pah-ee:1.1 --build-arg TOKEN=$PAH_API_TOKEN
+podman tag localhost/my-pah-ee:1.1 aap-aap.{openshift_cluster_ingress_domain}/my-pah-ee:1.1
+podman push aap-aap.{openshift_cluster_ingress_domain}/my-pah-ee:1.1</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_8_preparing_the_project_for_automation_controller"><a class="anchor" href="#_8_preparing_the_project_for_automation_controller"></a>8: Preparing the Project for Automation Controller</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that both the collection and Execution Environment has been created and published to Private Automation hub, we&#8217;ll create a playbook to use the filter contained within the <code>ansible_bootcamp.my_collection</code> collection.</p>
+</div>
+<div class="sect2">
+<h3 id="_8_1_create_a_playbook"><a class="anchor" href="#_8_1_create_a_playbook"></a>8.1: Create a Playbook</h3>
+<div class="paragraph">
+<p>Create a new directory called <code>playbooks</code> within the <code>my_pah_project</code> directory and create a new playbook in a file named <code>playbooks/test_pah_ee.yml</code>. This playbook uses the <code>debug</code> module to print a message that has been formatted by our custom cowsay filter.</p>
+</div>
+<div class="listingblock execute">
+<div class="title">playbooks/test_pah_ee.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+- name: Test custom filter from Private Automation Hub
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Print a message using the cowsay filter
+      ansible.builtin.debug:
+        msg: "{{ 'Hello from my custom filter!' | ansible_bootcamp.my_collection.cowsay }}"
+...</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_8_2_push_project_files_to_git"><a class="anchor" href="#_8_2_push_project_files_to_git"></a>8.2: Push Project Files to Git</h3>
+<div class="paragraph">
+<p>With the changes to incorporate the updated collection (filter plugin and version) and the Execution Environment, publish all of the changes to your git repository.</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git add --all
+git commit -m "Uploading latest collection updates"
+git push origin main</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_9_integrating_with_automation_controller"><a class="anchor" href="#_9_integrating_with_automation_controller"></a>9: Integrating with Automation Controller</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now, let&#8217;s configure Automation Controller to use our custom content.</p>
+</div>
+<div class="sect2">
+<h3 id="_9_1_create_a_credential_for_hub_container_registry"><a class="anchor" href="#_9_1_create_a_credential_for_hub_container_registry"></a>9.1: Create a Credential for Hub Container Registry</h3>
+<div class="paragraph">
+<p>First, create a new credential in Automation Controller to allow it to pull the custom Execution Environment from Private Automation Hub.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Launch the <a href="{aap_controller_web_url}" target="_blank" rel="noopener">Automation Controller</a> web interface and login using the credentials from the <a href="#environment-details.adoc" class="xref unresolved" target="_blank" rel="noopener">Environment Details</a> page.</p>
+</li>
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Execution</strong> and expand <strong>Infrastructure</strong> and click on <strong>Credentials</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-credentials-overview.png" alt="Navigate to Credentials">
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Create credential</strong> to add a new credential.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-create-credential.png" alt="Create Credentials">
+</div>
+</div>
+</li>
+<li>
+<p>Enter the following details on the <em>Create Credential</em> page:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Name: <code>Hub</code></p>
+</li>
+<li>
+<p>Credential type: <code>Container Registry</code></p>
+</li>
+<li>
+<p>Authentication URL: <code>aap-aap.{openshift_cluster_ingress_domain}</code></p>
+</li>
+<li>
+<p>Username: <code>{aap_controller_admin_user}</code></p>
+</li>
+<li>
+<p>Password: <code>{aap_controller_admin_password}</code></p>
+</li>
+<li>
+<p>Verify SSL: Checked</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <strong>Create credential</strong> to save the new credential.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-create-credential-dialog.png" alt="Create Credentials Dialog">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_9_2_create_a_credential_for_the_git_repository"><a class="anchor" href="#_9_2_create_a_credential_for_the_git_repository"></a>9.2: Create a Credential for the Git Repository</h3>
+<div class="paragraph">
+<p>Next, create a new credential to retrieve the source code from the Gitea repository.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the Credentials page in Automation Controller, click <strong>Create credential</strong> once again to add a new credential.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-create-credential-2.png" alt="Create Credentials">
+</div>
+</div>
+</li>
+<li>
+<p>Enter the following details on the <em>Create Credential</em> page:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Name: <code>Gitea</code></p>
+</li>
+<li>
+<p>Credential type: <code>Source Control</code></p>
+</li>
+<li>
+<p>Username: <code>{gitea_user}</code></p>
+</li>
+<li>
+<p>Password: <code>{gitea_password}</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <strong>Create credential</strong> to save the new credential.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-create-credential-git-dialog.png" alt="Create Credentials Dialog">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_9_3_add_the_execution_environment_to_controller"><a class="anchor" href="#_9_3_add_the_execution_environment_to_controller"></a>9.3: Add the Execution Environment to Controller</h3>
+<div class="paragraph">
+<p>Next, add the custom Execution Environment that we published previously to Automation Controller.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Execution</strong> and expand <strong>Infrastructure</strong> and click on <strong>Execution Environments</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-ee-overview.png" alt="Navigate to Execution Environments">
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Create execution environment</strong> to add a new execution environment.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-create-ee.png" alt="Create Execution Environment">
+</div>
+</div>
+</li>
+<li>
+<p>Enter the following details on the <em>Create Execution Environment</em> page:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Name: <code>My Custom PAH EE</code></p>
+</li>
+<li>
+<p>Image URL: <code>aap-aap.{openshift_cluster_ingress_domain}/my-pah-ee:1.1</code></p>
+</li>
+<li>
+<p>Registry Credential: Select the <code>Hub</code> credential created previously.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <strong>Create execution environment</strong> to create the new EE.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-create-ee-dialog.png" alt="Create Execution Environment Dialog">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_9_4_create_a_project"><a class="anchor" href="#_9_4_create_a_project"></a>9.4: Create a Project</h3>
+<div class="paragraph">
+<p>Create a new <a href="https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html" target="_blank" rel="noopener">Project</a> in Automation Controller that points to your Git repository containing the playbook.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Execution</strong> and click on <strong>Projects</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-projects-overview.png" alt="Navigate to Projects">
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Create project</strong> to add a new project.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-create-project.png" alt="Create Project">
+</div>
+</div>
+</li>
+<li>
+<p>Enter the following details on the <em>Create Project</em> page:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Name: <code>Custom Content Test Project</code></p>
+</li>
+<li>
+<p>Organization: <code>Default</code></p>
+</li>
+<li>
+<p>Source Control Type: <code>Git</code></p>
+</li>
+<li>
+<p>Source control URL: <code>{gitea_console_url}/{gitea_user}/ansible_bootcamp_my_collection.git</code></p>
+</li>
+<li>
+<p>Source code credential: Select the <code>Gitea</code> credential created previously.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <strong>Create project</strong> to create the new Project.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-create-project-dialog.png" alt="Create Project Dialog">
+</div>
+</div>
+<div class="paragraph">
+<p>Confirm that the project has been synced successfully by looking <em>Success</em> underneath <em>Last job status</em>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-sync-project.png" alt="Project Sync Status">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_9_5_create_a_job_template"><a class="anchor" href="#_9_5_create_a_job_template"></a>9.5: Create a Job Template</h3>
+<div class="paragraph">
+<p>With the Execution Environment and Project created, the final step is to create a Job Template that uses both components.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Execution</strong> and click on <strong>Templates</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-templates-overview.png" alt="Navigate to Templates">
+</div>
+</div>
+</li>
+<li>
+<p>Click the <strong>Create template</strong> dropdown and select <strong>Create job template</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-create-job-template.png" alt="Create Job Template">
+</div>
+</div>
+</li>
+<li>
+<p>Enter the following details on the <em>Create job template</em> page:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Name: <code>Test Custom Cowsay Filter</code></p>
+</li>
+<li>
+<p>Inventory: <code>Demo Inventory</code></p>
+</li>
+<li>
+<p>Project: <code>Custom Content Test Project</code></p>
+</li>
+<li>
+<p>Playbook: <code>playbooks/test_pah_ee.yml</code></p>
+</li>
+<li>
+<p>Execution Environment: <code>My Custom PAH EE</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <strong>Create job template</strong> to create the new Job Template.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-create-job-template-dialog.png" alt="Create Job Template Dialog">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_9_6_launch_the_job_template_and_verify"><a class="anchor" href="#_9_6_launch_the_job_template_and_verify"></a>9.6: Launch the Job Template and Verify</h3>
+<div class="paragraph">
+<p>Now that the Job Template has been created, launch the <em>Test Custom Cowsay Filter</em> and verify that the custom filter is working as expected.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the <em>Test Custom Cowsay Filter</em> Job Template details page, click the <strong>Launch template</strong> button on the upper right hand side.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-launch-job-template.png" alt="Launch Job Template">
+</div>
+</div>
+<div class="paragraph">
+<p>Monitor the status of the job until it completes successfully displaying the output of the cowsay filter similar to the following:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/automation-controller-job-template-success.png" alt="Job Template Success">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_9_7_sync_collections"><a class="anchor" href="#_9_7_sync_collections"></a>9.7: Sync collections</h3>
+<div class="paragraph">
+<p>The final exercise in this lab is to customize the content sources from <a href="https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html-single/managing_automation_content/index#proc-create-remote_remote-management" target="_blank" rel="noopener">Remote Automation Hub / Ansible Galaxy instances</a> into Private Automation Hub. To support lab exercises later in this bootcamp, we will specify additional collections to be synchronized.</p>
+</div>
+<div class="sect3">
+<h4 id="_9_7_1_update_community_remote"><a class="anchor" href="#_9_7_1_update_community_remote"></a>9.7.1: Update Community Remote</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Content</strong> and click on <strong>Remotes</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/remotes-overview.png" alt="Remotes Navigation">
+</div>
+</div>
+</li>
+<li>
+<p>Click the pencil icon to edit the <code>community</code> remote.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/remotes-edit-community.png" alt="Edit Community Remote">
+</div>
+</div>
+</li>
+<li>
+<p>Paste the following into the <em>Requirements file</em> field to specify additional collections to be synced:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">collections:
+  - name: containers.podman
+  - name: community.postgresql</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Save remote</strong> to apply the changes.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_9_7_2_add_validated_remote"><a class="anchor" href="#_9_7_2_add_validated_remote"></a>9.7.2: Add Validated Remote</h4>
+<div class="paragraph">
+<p>Create a new remote for the <code>validated</code> collections repository. A token for Red Hat Automation Hub is required to access this repository.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to Red Hat Automation Hub and click <a href="https://console.redhat.com/ansible/automation-hub/token" target="_blank" rel="noopener">here</a> to generate a token</p>
+</li>
+<li>
+<p>Click <strong>Load token</strong> to generate a new token and copy it to your clipboard.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/load-automation-hub-token.png" alt="Load Automation Hub Token">
+</div>
+</div>
+</li>
+<li>
+<p>From the Remotes page in Private Automation Hub, click <strong>Create remote</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/remotes-create-remote.png" alt="Create Remote">
+</div>
+</div>
+</li>
+<li>
+<p>Enter the following details on the <em>Create remote</em> page:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Name: <code>validated</code></p>
+</li>
+<li>
+<p>Server URL: <code><a href="https://console.redhat.com/api/automation-hub/content/validated/" class="bare">https://console.redhat.com/api/automation-hub/content/validated/</a></code></p>
+</li>
+<li>
+<p>SSO URL: <code><a href="https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token" class="bare">https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token</a></code></p>
+</li>
+<li>
+<p>Token: <code>&lt;The token copied previously from Red Hat Automation Hub&gt;</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <strong>Create remote</strong> to create the new Remote.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/remotes-add-remote.png" alt="Add Remote">
+</div>
+</div>
+<div class="paragraph">
+<p>Now that the <code>validated</code> remote has been created, update the <em>validated</em> repository to reference the newly created remote.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Content</strong> and click on <strong>Repositories</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/repositories-overview.png" alt="Add Remote">
+</div>
+</div>
+</li>
+<li>
+<p>Edit the <em>validated</em> repository by selecting the pencil icon</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/repositories-edit-validated.png" alt="Edit Validated Repository">
+</div>
+</div>
+</li>
+<li>
+<p>Update the <code>Remote</code> field by selecting <code>validated</code> from the drop down.</p>
+</li>
+<li>
+<p>Click <strong>Save repository</strong> to update the repository.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/repositories-update-validated.png" alt="Updated Validated Repository">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_9_7_3_update_rh_certified_remote"><a class="anchor" href="#_9_7_3_update_rh_certified_remote"></a>9.7.3: Update RH-Certified Remote</h4>
+<div class="paragraph">
+<p>Now that you have a Red Hat Automation Hub token, update the <code>rh-certified</code> remote to use this value as well.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the Remotes page in Private Automation Hub, edit the <code>rh-certified</code> remote by selecting the pencil icon.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/remotes-edit-rh-certified.png" alt="Edit RH-Certified Remote">
+</div>
+</div>
+</li>
+<li>
+<p>Update the <em>Token</em> field by pasting the token copied previously from Red Hat Automation Hub.</p>
+</li>
+<li>
+<p>Click <strong>Save remote</strong> to apply the changes.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/remotes-update-rh-certified.png" alt="Update RH-Certified Remote">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_9_7_4_sync_repositories"><a class="anchor" href="#_9_7_4_sync_repositories"></a>9.7.4: Sync Repositories</h4>
+<div class="paragraph">
+<p>Finally, synchronize the <code>rh-certified</code>, <code>validated</code>, and <code>community</code> repositories to pull in the new collections within the <em>Repositories</em> page.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the navigation menu on the left, expand <strong>Automation Content</strong> and click on <strong>Repositories</strong>.</p>
+</li>
+<li>
+<p>Next to the <code>community</code> repository, click the kebab menu (three vertical dots) on the right hand side of the entry and select <strong>Sync repository</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/sync-repository.png" alt="Sync Repository">
+</div>
+</div>
+</li>
+<li>
+<p>Repeat the above steps to sync the <code>rh-certified</code> and <code>validated</code> repositories as well.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Syncing the <em>rh-certified</em> collections will take some time. You can monitor the progress, but it will not impact the next set of labs in this bootcamp.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="index.html">Chapter 1</a></span>
-  <span class="next"><a href="section2.html">Section 2</a></span>
+  <span class="prev"><a href="index.html">Lab: Managing Ansible Content with Private Automation Hub</a></span>
+  <span class="next"><a href="section2.html">section2.adoc</a></span>
 </nav>
 </article>
   </div>
