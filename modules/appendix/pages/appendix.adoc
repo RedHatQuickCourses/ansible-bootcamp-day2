@@ -1,13 +1,13 @@
 = Appendix
 
-== Managing Ansible Content with Private Automation Hub
+==  Configuration as Code
 
 For additional reference and deeper learning:
 
-. https://docs.ansible.com/ansible/latest/galaxy/user_guide.html[Ansible Galaxy User Guide]
+. https://github.com/redhat-cop/infra.aap_configuration[infra.aap_configuration Collection]
+. https://docs.ansible.com/ansible/latest/user_guide/vault.html[Ansible Vault Documentation]
+. https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/red_hat_ansible_automation_platform_installation_guide/index[Ansible Automation Platform Installation Guide]
 . https://docs.ansible.com/ansible/latest/collections_guide/index.html[Ansible Collections Guide]
-. https://ansible.readthedocs.io/projects/builder/[Ansible Builder Documentation]
-. https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/using_automation_hub/index[Private Automation Hub Documentation]
 
 
 == Ansible Test-Driven Development with Molecule

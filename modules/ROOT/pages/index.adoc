@@ -13,11 +13,11 @@ Duration: 2 hours
 
 On completing this course, you should be able to:
 
-- Evaluate and Select AAP Topologies: Identify the ideal architectural design (Base, Scaled, or Mesh) for specific enterprise requirements, ensuring low latency and high availability across hybrid-cloud environments.
+- Learn how to manage your entire Ansible Automation Platform configuration as code using Ansible playbooks.
 
-- Implement Configuration-as-Code (CaC): Apply the "Platform managing the Platform" philosophy by using Ansible playbooks to programmatically configure users, inventories, credentials, and job templates within the Automation Controller.
+- Stop "testing in production." Learn to apply software engineering rigors to your infrastructure code using the Molecule framework.
 
-- Master the Developer Lifecycle: Execute a full content workflow—from local development to production—incorporating Execution Environments (EE), version control integration, and the principles of reusable, modular automation content.
+- Leverage the power of container. Discover how to deploy, manage, and scale the Ansible Automation Platform as a native OpenShift application.
 
 == Prerequisites
 
