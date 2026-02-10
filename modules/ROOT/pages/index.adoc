@@ -15,7 +15,7 @@ On completing this course, you should be able to:
 
 - Learn how to manage your entire Ansible Automation Platform configuration as code using Ansible playbooks.
 
-- Stop "testing in production." Learn to apply software engineering rigors to your infrastructure code using the Molecule framework.
+- Stop *testing in production*. Learn to apply software engineering rigors to your infrastructure code using the Molecule framework.
 
 - Leverage the power of container. Discover how to deploy, manage, and scale the Ansible Automation Platform as a native OpenShift application.
 
