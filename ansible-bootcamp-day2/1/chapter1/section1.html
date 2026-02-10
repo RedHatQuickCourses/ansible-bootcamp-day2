@@ -202,7 +202,7 @@ cd /projects/devspaces-example/config_as_code</code></pre>
 <div class="sect2">
 <h3 id="_2_2_build_a_new_ee"><a class="anchor" href="#_2_2_build_a_new_ee"></a>2.2: Build a new EE</h3>
 <div class="paragraph">
-<p>Create a new <code>execution-environment.yml</code> file within the <code>config_as_code</code> directory with the following content and change the 'openshift_cluster_ingress_domain' and '{aap_controller_web_url}' with the actual values before saving the file:</p>
+<p>Create a new <code>execution-environment.yml</code> file within the <code>config_as_code</code> directory with the following content and change the 'openshift_cluster_ingress_domain' and '&lt;AAP-hostname-from-rhdp-login-page&gt;' with the actual values before saving the file:</p>
 </div>
 <div class="listingblock execute">
 <div class="title">execution-environment.yml</div>
@@ -212,7 +212,7 @@ version: 3
 
 images:
   base_image:
-    name: aap-aap.{openshift_cluster_ingress_domain}/ansible-automation-platform-25/ee-minimal-rhel9:latest
+    name: &lt;AAP-hostname-from-rhdp-login-page&gt;/ansible-automation-platform-25/ee-minimal-rhel9:latest
 
 dependencies:
   system:
@@ -233,13 +233,13 @@ additional_build_steps:
   prepend_galaxy:
     - ARG TOKEN
     - ENV ANSIBLE_GALAXY_SERVER_LIST='published,certified,validated,community'
-    - ENV ANSIBLE_GALAXY_SERVER_CERTIFIED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/rh-certified/'
+    - ENV ANSIBLE_GALAXY_SERVER_CERTIFIED_URL='&lt;AAP-hostname-from-rhdp-login-page&gt;/pulp_ansible/galaxy/rh-certified/'
     - ENV ANSIBLE_GALAXY_SERVER_CERTIFIED_TOKEN=$TOKEN
-    - ENV ANSIBLE_GALAXY_SERVER_VALIDATED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/validated/'
+    - ENV ANSIBLE_GALAXY_SERVER_VALIDATED_URL='&lt;AAP-hostname-from-rhdp-login-page&gt;/pulp_ansible/galaxy/validated/'
     - ENV ANSIBLE_GALAXY_SERVER_VALIDATED_TOKEN=$TOKEN
-    - ENV ANSIBLE_GALAXY_SERVER_COMMUNITY_URL='{aap_controller_web_url}/pulp_ansible/galaxy/community/'
+    - ENV ANSIBLE_GALAXY_SERVER_COMMUNITY_URL='&lt;AAP-hostname-from-rhdp-login-page&gt;/pulp_ansible/galaxy/community/'
     - ENV ANSIBLE_GALAXY_SERVER_COMMUNITY_TOKEN=$TOKEN
-    - ENV ANSIBLE_GALAXY_SERVER_PUBLISHED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/published/'
+    - ENV ANSIBLE_GALAXY_SERVER_PUBLISHED_URL='&lt;AAP-hostname-from-rhdp-login-page&gt;/pulp_ansible/galaxy/published/'
     - ENV ANSIBLE_GALAXY_SERVER_PUBLISHED_TOKEN=$TOKEN</code></pre>
 </div>
 </div>
@@ -264,14 +264,14 @@ Ensure that the <code>PAH_API_TOKEN</code> environment variable is set within yo
 <div class="listingblock execute">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># Log in to your PAH container registry
-podman login aap-aap.{openshift_cluster_ingress_domain}
+podman login &lt;AAP-hostname-from-rhdp-login-page&gt;
 
 # Build the EE. It will pull the base from PAH, then add our content.
 ansible-builder build --tag config_as_code_ee:1.0 --build-arg TOKEN=$PAH_API_TOKEN
 
 # Tag and push the image to your PAH registry
-podman tag localhost/config_as_code_ee:1.0 aap-aap.{openshift_cluster_ingress_domain}/config_as_code_ee:1.0
-podman push aap-aap.{openshift_cluster_ingress_domain}/config_as_code_ee:1.0</code></pre>
+podman tag localhost/config_as_code_ee:1.0 &lt;AAP-hostname-from-rhdp-login-page&gt;/config_as_code_ee:1.0
+podman push &lt;AAP-hostname-from-rhdp-login-page&gt;/config_as_code_ee:1.0</code></pre>
 </div>
 </div>
 </div>
@@ -320,7 +320,7 @@ ee_validate_certs: false</code></pre>
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Update the value of <code>&lt;AAP_HOST&gt;</code> to match the location of your AAP instance (<code>aap-aap.{openshift_cluster_ingress_domain}</code>).
+Update the value of <code>&lt;AAP_HOST&gt;</code> to match the location of your AAP instance (<code>&lt;AAP-hostname-from-rhdp-login-page&gt;</code>).
 </td>
 </tr>
 </table>
@@ -747,7 +747,7 @@ git push -u origin main</code></pre>
 </div>
 <div class="listingblock execute">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">ansible-navigator run --pp=missing --eei=aap-aap.{openshift_cluster_ingress_domain}/config_as_code_ee:1.0 -m stdout playbooks/aap_config.yml -e env=dev</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">ansible-navigator run --pp=missing --eei=&lt;AAP-hostname-from-rhdp-login-page&gt;/config_as_code_ee:1.0 -m stdout playbooks/aap_config.yml -e env=dev</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1388,7 +1388,7 @@ controller_templates_all:
 </div>
 <div class="listingblock execute">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">ansible-navigator run --pp=missing --eei=aap-aap.{openshift_cluster_ingress_domain}/config_as_code_ee:1.0 -m stdout playbooks/aap_config.yml -e env=dev</code></pre>
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">ansible-navigator run --pp=missing --eei=&lt;AAP-hostname-from-rhdp-login-page&gt;/config_as_code_ee:1.0 -m stdout playbooks/aap_config.yml -e env=dev</code></pre>
 </div>
 </div>
 <div class="paragraph">
