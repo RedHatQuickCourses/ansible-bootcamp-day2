@@ -21,7 +21,7 @@ cd /projects/devspaces-example/config_as_code
 === 2.2: Build a new EE
 
 
-Create a new `execution-environment.yml` file within the `config_as_code` directory with the following content and change the 'openshift_cluster_ingress_domain' and '{aap_controller_web_url}' with the actual values before saving the file:
+Create a new `execution-environment.yml` file within the `config_as_code` directory with the following content and change the 'openshift_cluster_ingress_domain' and '<AAP-hostname-from-rhdp-login-page>' with the actual values before saving the file:
 
 [source,bash,role=execute,subs="verbatim,attributes",title="execution-environment.yml"]
 ----
@@ -30,7 +30,7 @@ version: 3
 
 images:
   base_image:
-    name: aap-aap.{openshift_cluster_ingress_domain}/ansible-automation-platform-25/ee-minimal-rhel9:latest
+    name: <AAP-hostname-from-rhdp-login-page>/ansible-automation-platform-25/ee-minimal-rhel9:latest
 
 dependencies:
   system:
@@ -51,13 +51,13 @@ additional_build_steps:
   prepend_galaxy:
     - ARG TOKEN
     - ENV ANSIBLE_GALAXY_SERVER_LIST='published,certified,validated,community'
-    - ENV ANSIBLE_GALAXY_SERVER_CERTIFIED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/rh-certified/'
+    - ENV ANSIBLE_GALAXY_SERVER_CERTIFIED_URL='<AAP-hostname-from-rhdp-login-page>/pulp_ansible/galaxy/rh-certified/'
     - ENV ANSIBLE_GALAXY_SERVER_CERTIFIED_TOKEN=$TOKEN
-    - ENV ANSIBLE_GALAXY_SERVER_VALIDATED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/validated/'
+    - ENV ANSIBLE_GALAXY_SERVER_VALIDATED_URL='<AAP-hostname-from-rhdp-login-page>/pulp_ansible/galaxy/validated/'
     - ENV ANSIBLE_GALAXY_SERVER_VALIDATED_TOKEN=$TOKEN
-    - ENV ANSIBLE_GALAXY_SERVER_COMMUNITY_URL='{aap_controller_web_url}/pulp_ansible/galaxy/community/'
+    - ENV ANSIBLE_GALAXY_SERVER_COMMUNITY_URL='<AAP-hostname-from-rhdp-login-page>/pulp_ansible/galaxy/community/'
     - ENV ANSIBLE_GALAXY_SERVER_COMMUNITY_TOKEN=$TOKEN
-    - ENV ANSIBLE_GALAXY_SERVER_PUBLISHED_URL='{aap_controller_web_url}/pulp_ansible/galaxy/published/'
+    - ENV ANSIBLE_GALAXY_SERVER_PUBLISHED_URL='<AAP-hostname-from-rhdp-login-page>/pulp_ansible/galaxy/published/'
     - ENV ANSIBLE_GALAXY_SERVER_PUBLISHED_TOKEN=$TOKEN
 ----
 
@@ -70,14 +70,14 @@ NOTE: Ensure that the `PAH_API_TOKEN` environment variable is set within your te
 [source,bash,role=execute,subs="verbatim,attributes"]
 ----
 # Log in to your PAH container registry
-podman login aap-aap.{openshift_cluster_ingress_domain}
+podman login <AAP-hostname-from-rhdp-login-page>
 
 # Build the EE. It will pull the base from PAH, then add our content.
 ansible-builder build --tag config_as_code_ee:1.0 --build-arg TOKEN=$PAH_API_TOKEN
 
 # Tag and push the image to your PAH registry
-podman tag localhost/config_as_code_ee:1.0 aap-aap.{openshift_cluster_ingress_domain}/config_as_code_ee:1.0
-podman push aap-aap.{openshift_cluster_ingress_domain}/config_as_code_ee:1.0
+podman tag localhost/config_as_code_ee:1.0 <AAP-hostname-from-rhdp-login-page>/config_as_code_ee:1.0
+podman push <AAP-hostname-from-rhdp-login-page>/config_as_code_ee:1.0
 ----
 
 === 2.4: Creating Variable Files
@@ -114,7 +114,7 @@ ee_base_registry_password: "{{ aap_password }}"
 ee_validate_certs: false
 ----
 
-IMPORTANT: Update the value of `<AAP_HOST>` to match the location of your AAP instance (`aap-aap.{openshift_cluster_ingress_domain}`).
+IMPORTANT: Update the value of `<AAP_HOST>` to match the location of your AAP instance (`<AAP-hostname-from-rhdp-login-page>`).
 
 === 2.5: Define Secrets with Ansible Vault
 
@@ -395,7 +395,7 @@ The next step is to run the playbook that executes Config as Code. This process 
 
 [source,bash,role=execute,subs="verbatim,attributes"]
 ----
-ansible-navigator run --pp=missing --eei=aap-aap.{openshift_cluster_ingress_domain}/config_as_code_ee:1.0 -m stdout playbooks/aap_config.yml -e env=dev
+ansible-navigator run --pp=missing --eei=<AAP-hostname-from-rhdp-login-page>/config_as_code_ee:1.0 -m stdout playbooks/aap_config.yml -e env=dev
 ----
 
 While the playbook is running, you can navigate to Automation Hub and review the progress in the **Task Management** page within to see the repository syncing process
@@ -812,7 +812,7 @@ Execute the `playbooks/aap_config` playbook created in the prior section to set 
 
 [source,console,role=execute,subs="verbatim,attributes"]
 ----
-ansible-navigator run --pp=missing --eei=aap-aap.{openshift_cluster_ingress_domain}/config_as_code_ee:1.0 -m stdout playbooks/aap_config.yml -e env=dev
+ansible-navigator run --pp=missing --eei=<AAP-hostname-from-rhdp-login-page>/config_as_code_ee:1.0 -m stdout playbooks/aap_config.yml -e env=dev
 ----
 
 If issues occur during the execution, the following are several steps that you can take to resolve the challenges:
