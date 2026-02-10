@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Introduction: Why AAP on Azure? :: Ansible Boot Camp Day 2</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Ansible Boot Camp Day 2</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/ansible-bootcamp-day2/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ansible-bootcamp-day2" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Ansible Boot Camp Day 2</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../LABENV/index.html">Lab Environment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chapter1/index.html">Lab: Configuration as Code</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter1/section1.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter1/section2.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chapter2/index.html">Lab: Ansible Test-Driven Development with Molecule</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section1.html">Introduction: Test-Driven Development with Molecule</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section2.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chapter3/index.html">Lab: Ansible Automation Platform on OpenShift</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter3/section1.html">Introduction: Why AAP on OpenShift?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter3/section2.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Ansible Boot Camp Day 2</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Ansible Boot Camp Day 2</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Ansible Boot Camp Day 2</a></li>
+    <li><a href="section1.html">Introduction: Why AAP on Azure?</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Introduction: Why AAP on Azure?</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://www.redhat.com/en/technologies/management/ansible/azure" target="_blank" rel="noopener">Red Hat Ansible® Automation Platform on Microsoft Azure</a> offers all the benefits of Ansible automation, deployed in your Azure cloud and offered as a managed or self-managed application</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_1_importance_of_aap_on_azure"><a class="anchor" href="#_1_1_importance_of_aap_on_azure"></a>1.1: Importance of AAP on Azure</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Speed to Value: Deploy in minutes from the Azure Marketplace.</p>
+</li>
+<li>
+<p>Fully Supported: Backed by Red Hat SREs for patching, upgrades, and reliability.</p>
+</li>
+<li>
+<p>Hybrid Cloud Ready: Automate Azure, on-prem, and multi-cloud resources.</p>
+</li>
+<li>
+<p>Unified Billing: Consumption billed directly through your Azure subscription.</p>
+</li>
+<li>
+<p>Flexible Deployment: Three options to deploy AAP on Azure - Managed Application, Self-Managed, or on Azure Red Hat OpenShift.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_2_choosing_between_managed_and_self_managed"><a class="anchor" href="#_1_2_choosing_between_managed_and_self_managed"></a>1.2: Choosing Between Managed and Self-Managed</h3>
+<div class="paragraph">
+<p>Based on Red Hat&#8217;s guidance, choosing to deploy Ansible Automation Platform (AAP) as a managed service in Azure offers significant advantages in convenience, support, and operational efficiency.
+It is an ideal choice for organizations that want to focus on automation rather than platform maintenance.
+In contrast, the self-managed option provides greater control and is suited for those with specific architectural or security policy needs.</p>
+</div>
+<div class="sect3">
+<h4 id="_1_2_1_key_advantages_of_the_managed_application"><a class="anchor" href="#_1_2_1_key_advantages_of_the_managed_application"></a>1.2.1: Key Advantages of the Managed Application</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Reduced Operational Burden: Red Hat&#8217;s Site Reliability Engineering (SRE) team handles upgrades, patches, and daily maintenance.</p>
+</li>
+<li>
+<p>Automated Upgrades and Maintenance: You always stay current without doing upgrades yourself.</p>
+</li>
+<li>
+<p>Infrastructure Management: Red Hat manages the AKS cluster, database, and scaling.</p>
+</li>
+<li>
+<p>Monitoring and Support: Active monitoring with Red Hat as your single support contact.</p>
+</li>
+<li>
+<p>Quick Time to Value: Deploy directly from the Azure Marketplace and start automating in minutes.</p>
+</li>
+<li>
+<p>Simplified Billing: Unified billing through Azure and eligible for Microsoft Azure Consumption Commitment (MACC).</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_2_2_when_to_consider_self_managed"><a class="anchor" href="#_1_2_2_when_to_consider_self_managed"></a>1.2.2: When to Consider Self-Managed</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Full Control Over Architecture and Security: Necessary for strict compliance or specialized configurations.</p>
+</li>
+<li>
+<p>Custom Scaling and Sizing: Allows manual control over VM sizes and architecture.</p>
+</li>
+<li>
+<p>Complete Management Responsibility: Installation, upgrades, scaling, and backups are owned entirely by the customer.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In summary, choose the Managed Application if your priority is to accelerate automation and reduce operational overhead. Choose Self-Managed if your priority is full control and customization.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_lab_setup_prerequisites"><a class="anchor" href="#_2_lab_setup_prerequisites"></a>2. Lab Setup: Prerequisites</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before we begin deployment, ensure the following prerequisites are met:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Red Hat Account - Required to activate your AAP subscription entitlement after deployment.</p>
+</li>
+<li>
+<p>Azure Subscription</p>
+</li>
+<li>
+<p>Networking Plan - Prepare a dedicated VNET with a <code>/24</code> range that does not overlap with existing CIDRs.</p>
+</li>
+<li>
+<p>Resource Quotas - Confirm at least 80 vCPUs available in the target Azure region for scaling.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_deploy_aap_from_azure_marketplace"><a class="anchor" href="#_3_deploy_aap_from_azure_marketplace"></a>3: Deploy AAP from Azure Marketplace</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_3_1_launch_the_marketplace_offer"><a class="anchor" href="#_3_1_launch_the_marketplace_offer"></a>3.1: Launch the Marketplace Offer</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Log in to <a href="https://portal.azure.com">Azure Portal</a>.</p>
+</li>
+<li>
+<p>In the Azure Portal, go to Marketplace and search for "Ansible Automation Platform". Select <strong>Red Hat Ansible Automation Platform on Azure</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/portal-search.png" alt="Ansible Automation Platform in Azure Marketplace">
+</div>
+</div>
+</li>
+<li>
+<p>Select your desired <em>Subscription</em> and <em>Plan</em> and then click <strong>Create</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-azure.png" alt="Ansible Automation Platform in Azure Marketplace">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_2_configure_the_deployment"><a class="anchor" href="#_3_2_configure_the_deployment"></a>3.2: Configure the Deployment</h3>
+<div class="sect3">
+<h4 id="_3_2_1_basics_database_availability_tab"><a class="anchor" href="#_3_2_1_basics_database_availability_tab"></a>3.2.1: Basics / Database Availability Tab</h4>
+<div class="paragraph">
+<p>Fill out the following fields on the <em>Basics</em> tab:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Subscription: Select your desired subscription.</p>
+</li>
+<li>
+<p>Resource Group: Create a new one (e.g., <code>rg-aap-lab-eastus</code>) by clicking <strong>Create new</strong> and entering the name of your desired Resource Group.</p>
+</li>
+<li>
+<p>Region: Choose a region with available vCPU quota.</p>
+</li>
+<li>
+<p>Administrator Password: Provide a strong password for the administrator account.</p>
+</li>
+<li>
+<p>Access Mode: For lab purposes we&#8217;ll use Public access, but in production you should always plan for Private access with VNET peering.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-create-basics.png" alt="Ansible Automation Platform on Azure - Basics">
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Next</strong></p>
+</li>
+<li>
+<p>Confirm the Database Availability is validated and click <strong>Next</strong> again.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_2_2_networking_tab"><a class="anchor" href="#_3_2_2_networking_tab"></a>3.2.2: Networking Tab</h4>
+<div class="paragraph">
+<p>The wizard automatically suggests values for each of the fields found within the <em>Networking</em> tab. Update the following fields as needed:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Virtual Network: Select an existing VNET that meets the prerequisites or create a new one.</p>
+</li>
+<li>
+<p>Cluster Subnet: Choose a subnet within the selected VNET that has sufficient IP addresses available.</p>
+</li>
+<li>
+<p>Gateway Subnet: Choose a subnet within the selected VNET for gateway traffic.</p>
+</li>
+<li>
+<p>Private Link Subnet: Choose a subnet within the selected VNET for private link traffic.</p>
+</li>
+<li>
+<p>Database Subnet: Choose a subnet within the selected VNET for database traffic.</p>
+</li>
+<li>
+<p>Service CIDR: Enter a CIDR block that can be used for the cluster service.</p>
+</li>
+<li>
+<p>DNS IP: IP Address assigned to the DNS service.</p>
+</li>
+<li>
+<p>Pod CIDR: Enter a CIDR block that can be used for the cluster pods.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-create-networking.png" alt="Ansible Automation Platform on Azure - Networking">
+</div>
+</div>
+<div class="paragraph">
+<p>+
+. Click <strong>Next</strong>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_2_3_business_continuity_tab"><a class="anchor" href="#_3_2_3_business_continuity_tab"></a>3.2.3: Business Continuity Tab</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Enable/Disable Disaster Recovery: For lab purposes, we will disable Disaster Recovery. In production, it is recommended to enable this feature.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-create-business-continuity.png" alt="Ansible Automation Platform on Azure - Business Continuity">
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_2_4_requirements_tab"><a class="anchor" href="#_3_2_4_requirements_tab"></a>3.2.4: Requirements Tab</h4>
+<div class="paragraph">
+<p>Check each of the options in the <em>Requirements</em> section.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/aap-requirements.png" alt="Ansible Automation Platform on Azure - Requirements">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_2_5_review_create_tab"><a class="anchor" href="#_3_2_5_review_create_tab"></a>3.2.5: Review + create Tab</h4>
+<div class="paragraph">
+<p>Once all of the parameters have been added within the prior tabs, the proposed configurations are displayed for your review. They will be validated by Azure to ensure that all requirements have been met.</p>
+</div>
+<div class="paragraph">
+<p>Once validation has completed successfully, click <strong>Create</strong> to begin the deployment.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_validate_deployment"><a class="anchor" href="#_4_validate_deployment"></a>4: Validate Deployment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once the deployment has completed, review the resources that were provisioned.</p>
+</div>
+<div class="sect2">
+<h3 id="_4_1_locate_resource_groups"><a class="anchor" href="#_4_1_locate_resource_groups"></a>4.1: Locate Resource Groups</h3>
+<div class="paragraph">
+<p>After deployment, three (3) resource groups will be created:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Customer Resource Group (RG) - You own this.</p>
+</li>
+<li>
+<p>Managed Resource Group (MRG) - Red Hat SRE-managed (read-only).</p>
+</li>
+<li>
+<p>Node Pool Resource Group (NPRG) - Holds AKS resources. Do not modify without Red Hat guidance.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_2_access_the_aap_console"><a class="anchor" href="#_4_2_access_the_aap_console"></a>4.2: Access the AAP Console</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the Customer RG, locate the Managed Application resource.</p>
+</li>
+<li>
+<p>Click Outputs and find the AAP Console URL.</p>
+</li>
+<li>
+<p>Open the URL in your browser.</p>
+</li>
+<li>
+<p>Log in with the admin credentials created during deployment.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Once you have accessed the AAP console, you can perform any automation activities, much like you would with a self-managed installation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5_explore_networking_optional_advanced_lab"><a class="anchor" href="#_5_explore_networking_optional_advanced_lab"></a>5: Explore Networking (Optional Advanced Lab)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section enables you to explore some of the networking options available when deploying AAP on Azure. For automation beyond localhost, configure Azure VNET peering:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Public Access: Already works for internet-facing automation.</p>
+</li>
+<li>
+<p>Private Access: Requires VNET peering or VWAN configuration.</p>
+</li>
+<li>
+<p>Automation Mesh: Deploy execution nodes closer to your workloads for hybrid or edge use cases.
+Assess the network conditions (latency, bandwidth) and security requirements for each location.</p>
+</li>
+<li>
+<p>Decide on Node Roles:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Execution Nodes: Decide how many you need and where they&#8217;ll be deployed. Each will require a separate server or VM.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ensure the VM&#8217;s Network Security Group (NSG) allows inbound traffic on port 27199 (the default receptor communication port) from your AAP controller.</p>
+</li>
+<li>
+<p>If you&#8217;re using a private automation hub, also ensure the VM can reach it.</p>
+</li>
+<li>
+<p>Integrate with controller: Execute the installer playbook on the Azure VM. This playbook installs the receptor service and configures a secure, encrypted connection back to your main AAP controller.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Hop Nodes: Consider using these if you need to traverse firewalls or complex networks, they don&#8217;t run jobs</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ensure the hop node can reach both the AAP controller and the execution nodes that will connect to it. Open port 27199 (the default receptor port) on the firewall to allow communication.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
