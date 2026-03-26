@@ -1,15 +1,6 @@
-= Introduction: Test-Driven Development with Molecule
+= Test-Driven Development with Molecule
 
-link:https://en.wikipedia.org/wiki/Test-driven_development[Test-Driven Development (TDD),window=_blank] is a software development approach where tests are written before the code they validate. In Ansible automation, link:https://ansible.readthedocs.io/projects/molecule[Ansible Molecule,window=_blank] enables this practice by providing a framework for testing roles in isolated environments.
-
-Why use Molecule for Ansible roles?
-
-* *Isolated Testing*: Tests run in clean, ephemeral environments, ensuring consistent results.
-* *Idempotence Verification*: Confirms roles can run multiple times without side effects.
-* *Functional Testing*: Validates that roles actually work as intended, not just that they run.
-* *CI/CD Integration*: Enables automated testing in pipelines before deployment.
-
-=== 1.1: Learning Objectives
+== 1. What we will do in this LAB?
 
 You will write and test an Ansible role that _manages_ a PostgreSQL database running inside a pre-built container. Instead of installing the database software itself, your role will be responsible for creating users and databases within the running service.
 
