@@ -96,21 +96,21 @@ Create the file `config/dev/auth.yml` with the following content.
 [source,yaml,role=execute,subs="verbatim,attributes",title="config/dev/auth.yml"]
 ----
 aap_hostname: <AAP_HOST>
-aap_username: "{{ aap_username }}"
-aap_password: "{{ aap_password }}"
+aap_username: "< aap_username >"
+aap_password: "< aap_password >"
 aap_validate_certs: false
 aap_request_timeout: 60
 
 ee_pull_collections_from_hub: true
 aap_service_account_username: aap_service_account
 
-ee_registry_username: "{{ aap_username }} "
-ee_registry_password: "{{ aap_password }}"
-ee_registry_dest: "{{ aap_hostname }}/config"
+ee_registry_username: "< aap_username > "
+ee_registry_password: "< aap_password >"
+ee_registry_dest: "< aap_hostname >/config"
 
-ee_base_registry: "{{ aap_hostname }}"
-ee_base_registry_username: "{{ aap_username }}"
-ee_base_registry_password: "{{ aap_password }}"
+ee_base_registry: "< aap_hostname >"
+ee_base_registry_username: "< aap_username >"
+ee_base_registry_password: "< aap_password >"
 ee_validate_certs: false
 ----
 
@@ -126,8 +126,8 @@ Create a file `config/dev/vault.yml` to store sensitive information.
 ----
 ---
 aap_password: ### Insert AAP admin password here
-aap_service_account_username: "{{ student_account }}"
-aap_service_account_password: "{{ aap_password }}"
+aap_service_account_username: "< student_account >"
+aap_service_account_password: "< aap_password >"
 console_token: ### Insert Red Hat Automation Hub console token here
 hub_token: ### Insert Private Automation Hub (PAH) token here
 gitea_pass: ### Insert Gitea password here
@@ -215,8 +215,8 @@ Create a `config/all/users.yml` file to define the users to be created on AAP.
 ----
 ---
 aap_user_accounts_all:
-  - username: "{{ aap_service_account_username }}"
-    password: "{{ aap_service_account_password }}"
+  - username: "< aap_service_account_username >"
+    password: "< aap_service_account_password >"
     is_superuser: true
     state: "present"
 ...
@@ -245,11 +245,11 @@ Create a `config/all/hub_repositories.yml` file to create the list of community 
 ---
 hub_collection_remotes_all:
   - name: rh-certified
-    token: "{{ console_token }}"
+    token: "< console_token >"
     url: https://console.redhat.com/api/automation-hub/content/published/
     auth_url: https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token
   - name: validated
-    token: "{{ console_token }}"
+    token: "< console_token >"
     url: https://console.redhat.com/api/automation-hub/content/validated/
     auth_url: https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token
   - name: community
@@ -302,7 +302,7 @@ Create a directory called `playbooks` and within the newly created directory, cr
 
     - name: Include env vars
       ansible.builtin.include_vars:
-        dir: "../config/{{ env }}"
+        dir: "../config/< env >"
         extensions:
           - 'yml'
 
@@ -400,7 +400,7 @@ ansible-navigator run --pp=missing --eei=<AAP-hostname-from-rhdp-login-page>/con
 
 While the playbook is running, you can navigate to Automation Hub and review the progress in the **Task Management** page within to see the repository syncing process
 
-image::07-configuration-as-code/hub_task.png[Hub task,125%,125%,link=self, window=blank]
+image::hub_task.png[Hub task,125%,125%,link=self, window=blank]
 
 === 4.2: Validate the configuration was applied
 
@@ -444,11 +444,11 @@ Documentation related to this component can be found below:
 Create a file `config/all/execution_environments.yml` to define Execution Environment and the following required information under the `controller_execution_environments_all` property:
 
 . `name` should be called `config_as_code`
-. `image` should be set to the path of the image you created earlier in the lab: `{{ aap_hostname }}/config_as_code_ee:1.0` 
+. `image` should be set to the path of the image you created earlier in the lab: `< aap_hostname >/config_as_code_ee:1.0` 
 . `pull` should be set to `always`
 . `credential` should be set to `cr_ah`.
 
-image::07-configuration-as-code/config_ee_v2.png[title="Config Execution Environment",125%,125%, link=self, window=blank]
+image::config_ee_v2.png[title="Config Execution Environment",125%,125%, link=self, window=blank]
 
 [source,yaml,role=execute,subs="verbatim,attributes",title="config/all/execution_environments.yml"]
 ----
@@ -515,14 +515,14 @@ controller_credential_types_all:
         - hostname
     injectors:
       env:
-        AAP_PASSWORD: !unsafe "{{ password }}"
-        AAP_USERNAME: !unsafe "{{ username }}"
+        AAP_PASSWORD: !unsafe "< password >"
+        AAP_USERNAME: !unsafe "< username >"
         AAP_HOSTNAME: !unsafe # Insert appropriate variable from above here
         AAP_TOKEN: !unsafe # Insert appropriate variable from above here
         AAP_VALIDATE_CERTS: !unsafe # Insert appropriate variable from above here
       extra_vars:
-        aap_password: !unsafe "{{ password }}"
-        aap_username: !unsafe "{{ username }}"
+        aap_password: !unsafe "< password >"
+        aap_username: !unsafe "< username >"
         aap_hostname: !unsafe # Insert appropriate variable from above here
         aap_token: !unsafe # Insert appropriate variable from above here
         aap_validate_certs: !unsafe # Insert appropriate variable from above here
@@ -540,9 +540,9 @@ controller_credential_types_all:
           secret: true
     injectors:
       env:
-        MY_CERT_FILE_PATH: !unsafe '{{ tower.filename.cert_file }}'
+        MY_CERT_FILE_PATH: !unsafe '< tower.filename.cert_file >'
       file:
-        template.cert_file: !unsafe '{{ priv_key }}'
+        template.cert_file: !unsafe '< priv_key >'
 ...
 ----
 
@@ -565,9 +565,9 @@ controller_credentials_all:
     organization: config_as_code
     description: aap admin account
     inputs:
-      host: "{{ aap_hostname }}"
-      username: "{{ aap_username }}"
-      password: "{{ aap_password }}"
+      host: "< aap_hostname >"
+      username: "< aap_username >"
+      password: "< aap_password >"
       verify_ssl: false
 
   - name: hub_service_account
@@ -575,46 +575,46 @@ controller_credentials_all:
     organization: config_as_code
     description: automation hub api account
     inputs:
-      hostname: "{{ aap_hostname }}"
-      username: "{{ aap_service_account_username }}"
-      token: "{{ hub_token }}"
+      hostname: "< aap_hostname >"
+      username: "< aap_service_account_username >"
+      token: "< hub_token >"
       verify_ssl: false
 
   - name: hub_certified
     credential_type: "Ansible Galaxy/Automation Hub API Token"
     organization: config_as_code
     inputs:
-      url: "https://{{ aap_hostname }}/pulp_ansible/galaxy/rh-certified/"
-      token: "{{ hub_token }}"
+      url: "https://< aap_hostname >/pulp_ansible/galaxy/rh-certified/"
+      token: "< hub_token >"
 
   - name: hub_published
     credential_type: "Ansible Galaxy/Automation Hub API Token"
     organization: config_as_code
     inputs:
-      url: "https://{{ aap_hostname }}/pulp_ansible/galaxy/published/"
-      token: "{{ hub_token }}"
+      url: "https://< aap_hostname >/pulp_ansible/galaxy/published/"
+      token: "< hub_token >"
 
   - name: hub_validated
     credential_type: "Ansible Galaxy/Automation Hub API Token"
     organization: config_as_code
     inputs:
-      url: "https://{{ aap_hostname }}/pulp_ansible/galaxy/validated/"
-      token: "{{ hub_token }}"
+      url: "https://< aap_hostname >/pulp_ansible/galaxy/validated/"
+      token: "< hub_token >"
 
   - name: hub_community
     credential_type: "Ansible Galaxy/Automation Hub API Token"
     organization: config_as_code
     inputs:
-      url: "https://{{ aap_hostname }}/pulp_ansible/galaxy/community/"
-      token: "{{ hub_token }}"
+      url: "https://< aap_hostname >/pulp_ansible/galaxy/community/"
+      token: "< hub_token >"
 
   - name: cr_ah
     credential_type: Container Registry
     organization: config_as_code
     inputs:
-      host: "{{ aap_hostname }}"
-      username: "{{ aap_username }}"
-      password: "{{ aap_password }}"
+      host: "< aap_hostname >"
+      username: "< aap_username >"
+      password: "< aap_password >"
       verify_ssl: false
 
   - name: vault
@@ -622,7 +622,7 @@ controller_credentials_all:
     organization: config_as_code
     description: vault password
     inputs:
-      vault_password: "{{ vault_pass }}"
+      vault_password: "< vault_pass >"
 
   - name: gitea
     credential_type: Source Control
@@ -636,7 +636,7 @@ controller_credentials_all:
 
 ----
 
-image::07-configuration-as-code/credential_gitea_v2.png[title="Credential",125%,125%, link=self, window=blank]
+image::credential_gitea_v2.png[title="Credential",125%,125%, link=self, window=blank]
 
 Documentation related to this component can be found below:
 
@@ -650,7 +650,7 @@ In particular, we are adding the following properties:
 . `galaxy_credentials` are associated with the credentials defined previously to retrieve collections from Automation Hub within the Organization
 . `default_environment` specifies the execution environment to be used as the default for the Organization
 
-image::07-configuration-as-code/orgs.png[title="Config as Code Organization",125%,125%, link=self, window=blank]
+image::orgs.png[title="Config as Code Organization",125%,125%, link=self, window=blank]
 
 [source,yaml,role=execute,subs="verbatim,attributes",title="Update config/all/organizations.yml"]
 ----
@@ -682,7 +682,7 @@ controller_projects_all:
 ...
 ----
 
-image::07-configuration-as-code/project_v2.png[title="Project",125%,125%, link=self, window=_blank]
+image::project_v2.png[title="Project",125%,125%, link=self, window=_blank]
 
 Documentation related to this component can be found below:
 
@@ -701,7 +701,7 @@ controller_inventories_all:
 ...
 ----
 
-image::07-configuration-as-code/inventories_v2.png[title="Inventory",125%,125%, link=self, window=_blank]
+image::inventories_v2.png[title="Inventory",125%,125%, link=self, window=_blank]
 
 Documentation related to this component can be found below:
 
@@ -728,7 +728,7 @@ controller_inventory_sources_all:
 ...
 ----
 
-image::07-configuration-as-code/inventory_sources_v2.png[title="Inventory Sources",125%,125%, link=self, window=_blank]
+image::inventory_sources_v2.png[title="Inventory Sources",125%,125%, link=self, window=_blank]
 
 Documentation related to this component can be found below:
 
@@ -749,7 +749,7 @@ controller_templates_all:
 ...
 ----
 
-image::07-configuration-as-code/aap_config_template_v3.png[title="AAP Config Template",125%,125%, link=self, window=_blank]
+image::aap_config_template_v3.png[title="AAP Config Template",125%,125%, link=self, window=_blank]
 
 Documentation related to this component can be found below:
 
@@ -779,7 +779,7 @@ Create a `playbooks/aap_config.yml` file that will call the `dispatch` role of t
 
     - name: Include env vars
       ansible.builtin.include_vars:
-        dir: "../config/{{ env }}"
+        dir: "../config/< env >"
         extensions:
           - 'yml'
 
@@ -788,15 +788,15 @@ Create a `playbooks/aap_config.yml` file that will call the `dispatch` role of t
       block:
         - name: Authenticate and get an API token from Automation Hub
           ansible.hub.ah_token:
-            ah_host: "{{ aap_hostname }}"
-            ah_username: "{{ aap_username }}"
-            ah_password: "{{ aap_password }}"
+            ah_host: "< aap_hostname >"
+            ah_username: "< aap_username >"
+            ah_password: "< aap_password >"
             ah_path_prefix: 'galaxy'  # this is for private automation hub
             ah_verify_ssl: false
 
         - name: Fixing format
           ansible.builtin.set_fact:
-            hub_token: "{{ ah_token['token'] }}"
+            hub_token: "< ah_token['token'] >"
 
     - name: Call dispatch role
       ansible.builtin.include_role:
