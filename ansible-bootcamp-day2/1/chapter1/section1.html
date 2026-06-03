@@ -295,21 +295,21 @@ podman push &lt;AAP-hostname-from-rhdp-login-page&gt;/config_as_code_ee:1.0</cod
 <div class="title">config/dev/auth.yml</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">aap_hostname: &lt;AAP_HOST&gt;
-aap_username: "{{ aap_username }}"
-aap_password: "{{ aap_password }}"
+aap_username: "&lt; aap_username &gt;"
+aap_password: "&lt; aap_password &gt;"
 aap_validate_certs: false
 aap_request_timeout: 60
 
 ee_pull_collections_from_hub: true
 aap_service_account_username: aap_service_account
 
-ee_registry_username: "{{ aap_username }} "
-ee_registry_password: "{{ aap_password }}"
-ee_registry_dest: "{{ aap_hostname }}/config"
+ee_registry_username: "&lt; aap_username &gt; "
+ee_registry_password: "&lt; aap_password &gt;"
+ee_registry_dest: "&lt; aap_hostname &gt;/config"
 
-ee_base_registry: "{{ aap_hostname }}"
-ee_base_registry_username: "{{ aap_username }}"
-ee_base_registry_password: "{{ aap_password }}"
+ee_base_registry: "&lt; aap_hostname &gt;"
+ee_base_registry_username: "&lt; aap_username &gt;"
+ee_base_registry_password: "&lt; aap_password &gt;"
 ee_validate_certs: false</code></pre>
 </div>
 </div>
@@ -339,8 +339,8 @@ Update the value of <code>&lt;AAP_HOST&gt;</code> to match the location of your 
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
 aap_password: ### Insert AAP admin password here
-aap_service_account_username: "{{ student_account }}"
-aap_service_account_password: "{{ aap_password }}"
+aap_service_account_username: "&lt; student_account &gt;"
+aap_service_account_password: "&lt; aap_password &gt;"
 console_token: ### Insert Red Hat Automation Hub console token here
 hub_token: ### Insert Private Automation Hub (PAH) token here
 gitea_pass: ### Insert Gitea password here
@@ -505,8 +505,8 @@ aap_teams_all:
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
 aap_user_accounts_all:
-  - username: "{{ aap_service_account_username }}"
-    password: "{{ aap_service_account_password }}"
+  - username: "&lt; aap_service_account_username &gt;"
+    password: "&lt; aap_service_account_password &gt;"
     is_superuser: true
     state: "present"
 ...</code></pre>
@@ -547,11 +547,11 @@ localhost</code></pre>
 <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
 hub_collection_remotes_all:
   - name: rh-certified
-    token: "{{ console_token }}"
+    token: "&lt; console_token &gt;"
     url: https://console.redhat.com/api/automation-hub/content/published/
     auth_url: https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token
   - name: validated
-    token: "{{ console_token }}"
+    token: "&lt; console_token &gt;"
     url: https://console.redhat.com/api/automation-hub/content/validated/
     auth_url: https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token
   - name: community
@@ -616,7 +616,7 @@ hub_configuration_collection_repository_sync_async_retries: 150
 
     - name: Include env vars
       ansible.builtin.include_vars:
-        dir: "../config/{{ env }}"
+        dir: "../config/&lt; env &gt;"
         extensions:
           - 'yml'
 
@@ -755,7 +755,7 @@ git push -u origin main</code></pre>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="07-configuration-as-code/hub_task.png" target="blank"><img src="07-configuration-as-code/hub_task.png" alt="Hub task" width="125%" height="125%"></a>
+<a class="image" href="hub_task.png" target="blank"><img src="hub_task.png" alt="Hub task" width="125%" height="125%"></a>
 </div>
 </div>
 </div>
@@ -854,7 +854,7 @@ controller_settings_all:
 <p><code>name</code> should be called <code>config_as_code</code></p>
 </li>
 <li>
-<p><code>image</code> should be set to the path of the image you created earlier in the lab: <code>{{ aap_hostname }}/config_as_code_ee:1.0</code></p>
+<p><code>image</code> should be set to the path of the image you created earlier in the lab: <code>&lt; aap_hostname &gt;/config_as_code_ee:1.0</code></p>
 </li>
 <li>
 <p><code>pull</code> should be set to <code>always</code></p>
@@ -866,7 +866,7 @@ controller_settings_all:
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="07-configuration-as-code/config_ee_v2.png" target="blank"><img src="07-configuration-as-code/config_ee_v2.png" alt="config ee v2" width="125%" height="125%"></a>
+<a class="image" href="config_ee_v2.png" target="blank"><img src="config_ee_v2.png" alt="config ee v2" width="125%" height="125%"></a>
 </div>
 <div class="title">Figure 1. Config Execution Environment</div>
 </div>
@@ -962,14 +962,14 @@ controller_credential_types_all:
         - hostname
     injectors:
       env:
-        AAP_PASSWORD: !unsafe "{{ password }}"
-        AAP_USERNAME: !unsafe "{{ username }}"
+        AAP_PASSWORD: !unsafe "&lt; password &gt;"
+        AAP_USERNAME: !unsafe "&lt; username &gt;"
         AAP_HOSTNAME: !unsafe # Insert appropriate variable from above here
         AAP_TOKEN: !unsafe # Insert appropriate variable from above here
         AAP_VALIDATE_CERTS: !unsafe # Insert appropriate variable from above here
       extra_vars:
-        aap_password: !unsafe "{{ password }}"
-        aap_username: !unsafe "{{ username }}"
+        aap_password: !unsafe "&lt; password &gt;"
+        aap_username: !unsafe "&lt; username &gt;"
         aap_hostname: !unsafe # Insert appropriate variable from above here
         aap_token: !unsafe # Insert appropriate variable from above here
         aap_validate_certs: !unsafe # Insert appropriate variable from above here
@@ -987,9 +987,9 @@ controller_credential_types_all:
           secret: true
     injectors:
       env:
-        MY_CERT_FILE_PATH: !unsafe '{{ tower.filename.cert_file }}'
+        MY_CERT_FILE_PATH: !unsafe '&lt; tower.filename.cert_file &gt;'
       file:
-        template.cert_file: !unsafe '{{ priv_key }}'
+        template.cert_file: !unsafe '&lt; priv_key &gt;'
 ...</code></pre>
 </div>
 </div>
@@ -1031,9 +1031,9 @@ controller_credentials_all:
     organization: config_as_code
     description: aap admin account
     inputs:
-      host: "{{ aap_hostname }}"
-      username: "{{ aap_username }}"
-      password: "{{ aap_password }}"
+      host: "&lt; aap_hostname &gt;"
+      username: "&lt; aap_username &gt;"
+      password: "&lt; aap_password &gt;"
       verify_ssl: false
 
   - name: hub_service_account
@@ -1041,46 +1041,46 @@ controller_credentials_all:
     organization: config_as_code
     description: automation hub api account
     inputs:
-      hostname: "{{ aap_hostname }}"
-      username: "{{ aap_service_account_username }}"
-      token: "{{ hub_token }}"
+      hostname: "&lt; aap_hostname &gt;"
+      username: "&lt; aap_service_account_username &gt;"
+      token: "&lt; hub_token &gt;"
       verify_ssl: false
 
   - name: hub_certified
     credential_type: "Ansible Galaxy/Automation Hub API Token"
     organization: config_as_code
     inputs:
-      url: "https://{{ aap_hostname }}/pulp_ansible/galaxy/rh-certified/"
-      token: "{{ hub_token }}"
+      url: "https://&lt; aap_hostname &gt;/pulp_ansible/galaxy/rh-certified/"
+      token: "&lt; hub_token &gt;"
 
   - name: hub_published
     credential_type: "Ansible Galaxy/Automation Hub API Token"
     organization: config_as_code
     inputs:
-      url: "https://{{ aap_hostname }}/pulp_ansible/galaxy/published/"
-      token: "{{ hub_token }}"
+      url: "https://&lt; aap_hostname &gt;/pulp_ansible/galaxy/published/"
+      token: "&lt; hub_token &gt;"
 
   - name: hub_validated
     credential_type: "Ansible Galaxy/Automation Hub API Token"
     organization: config_as_code
     inputs:
-      url: "https://{{ aap_hostname }}/pulp_ansible/galaxy/validated/"
-      token: "{{ hub_token }}"
+      url: "https://&lt; aap_hostname &gt;/pulp_ansible/galaxy/validated/"
+      token: "&lt; hub_token &gt;"
 
   - name: hub_community
     credential_type: "Ansible Galaxy/Automation Hub API Token"
     organization: config_as_code
     inputs:
-      url: "https://{{ aap_hostname }}/pulp_ansible/galaxy/community/"
-      token: "{{ hub_token }}"
+      url: "https://&lt; aap_hostname &gt;/pulp_ansible/galaxy/community/"
+      token: "&lt; hub_token &gt;"
 
   - name: cr_ah
     credential_type: Container Registry
     organization: config_as_code
     inputs:
-      host: "{{ aap_hostname }}"
-      username: "{{ aap_username }}"
-      password: "{{ aap_password }}"
+      host: "&lt; aap_hostname &gt;"
+      username: "&lt; aap_username &gt;"
+      password: "&lt; aap_password &gt;"
       verify_ssl: false
 
   - name: vault
@@ -1088,7 +1088,7 @@ controller_credentials_all:
     organization: config_as_code
     description: vault password
     inputs:
-      vault_password: "{{ vault_pass }}"
+      vault_password: "&lt; vault_pass &gt;"
 
   - name: gitea
     credential_type: Source Control
@@ -1103,7 +1103,7 @@ controller_credentials_all:
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="07-configuration-as-code/credential_gitea_v2.png" target="blank"><img src="07-configuration-as-code/credential_gitea_v2.png" alt="credential gitea v2" width="125%" height="125%"></a>
+<a class="image" href="credential_gitea_v2.png" target="blank"><img src="credential_gitea_v2.png" alt="credential gitea v2" width="125%" height="125%"></a>
 </div>
 <div class="title">Figure 2. Credential</div>
 </div>
@@ -1130,7 +1130,7 @@ controller_credentials_all:
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="07-configuration-as-code/orgs.png" target="blank"><img src="07-configuration-as-code/orgs.png" alt="orgs" width="125%" height="125%"></a>
+<a class="image" href="orgs.png" target="blank"><img src="orgs.png" alt="orgs" width="125%" height="125%"></a>
 </div>
 <div class="title">Figure 3. Config as Code Organization</div>
 </div>
@@ -1196,7 +1196,7 @@ controller_projects_all:
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="07-configuration-as-code/project_v2.png" target="_blank" rel="noopener"><img src="07-configuration-as-code/project_v2.png" alt="project v2" width="125%" height="125%"></a>
+<a class="image" href="project_v2.png" target="_blank" rel="noopener"><img src="project_v2.png" alt="project v2" width="125%" height="125%"></a>
 </div>
 <div class="title">Figure 4. Project</div>
 </div>
@@ -1228,7 +1228,7 @@ controller_inventories_all:
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="07-configuration-as-code/inventories_v2.png" target="_blank" rel="noopener"><img src="07-configuration-as-code/inventories_v2.png" alt="inventories v2" width="125%" height="125%"></a>
+<a class="image" href="inventories_v2.png" target="_blank" rel="noopener"><img src="inventories_v2.png" alt="inventories v2" width="125%" height="125%"></a>
 </div>
 <div class="title">Figure 5. Inventory</div>
 </div>
@@ -1268,7 +1268,7 @@ controller_inventory_sources_all:
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="07-configuration-as-code/inventory_sources_v2.png" target="_blank" rel="noopener"><img src="07-configuration-as-code/inventory_sources_v2.png" alt="inventory sources v2" width="125%" height="125%"></a>
+<a class="image" href="inventory_sources_v2.png" target="_blank" rel="noopener"><img src="inventory_sources_v2.png" alt="inventory sources v2" width="125%" height="125%"></a>
 </div>
 <div class="title">Figure 6. Inventory Sources</div>
 </div>
@@ -1312,7 +1312,7 @@ controller_templates_all:
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="07-configuration-as-code/aap_config_template_v3.png" target="_blank" rel="noopener"><img src="07-configuration-as-code/aap_config_template_v3.png" alt="aap config template v3" width="125%" height="125%"></a>
+<a class="image" href="aap_config_template_v3.png" target="_blank" rel="noopener"><img src="aap_config_template_v3.png" alt="aap config template v3" width="125%" height="125%"></a>
 </div>
 <div class="title">Figure 7. AAP Config Template</div>
 </div>
@@ -1354,7 +1354,7 @@ controller_templates_all:
 
     - name: Include env vars
       ansible.builtin.include_vars:
-        dir: "../config/{{ env }}"
+        dir: "../config/&lt; env &gt;"
         extensions:
           - 'yml'
 
@@ -1363,15 +1363,15 @@ controller_templates_all:
       block:
         - name: Authenticate and get an API token from Automation Hub
           ansible.hub.ah_token:
-            ah_host: "{{ aap_hostname }}"
-            ah_username: "{{ aap_username }}"
-            ah_password: "{{ aap_password }}"
+            ah_host: "&lt; aap_hostname &gt;"
+            ah_username: "&lt; aap_username &gt;"
+            ah_password: "&lt; aap_password &gt;"
             ah_path_prefix: 'galaxy'  # this is for private automation hub
             ah_verify_ssl: false
 
         - name: Fixing format
           ansible.builtin.set_fact:
-            hub_token: "{{ ah_token['token'] }}"
+            hub_token: "&lt; ah_token['token'] &gt;"
 
     - name: Call dispatch role
       ansible.builtin.include_role:
