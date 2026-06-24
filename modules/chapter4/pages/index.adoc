@@ -15,5 +15,4 @@ After completing this module, you will be able to:
 * Configure networking and security settings within the Azure Portal
 * Access and validate AAP functionality
 
-Note: 
- Due to Azure subscription restrictions, please use your own Azure account information to perform the Ansible Automation Platform deployment in the Azure lab, following the instructions provided ahead. 
+*Note:* Due to Azure subscription restrictions, please use your own Azure account information to perform the Ansible Automation Platform deployment in the Azure lab, following the instructions provided ahead. 

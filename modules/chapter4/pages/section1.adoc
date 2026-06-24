@@ -64,7 +64,7 @@ Fill out the following fields on the _Basics_ tab:
 . Subscription: Select your desired subscription.
 . Resource Group: Create a new one (e.g., `rg-aap-lab-eastus`) by clicking **Create new** and entering the name of your desired Resource Group.
 . Region: Choose a region with available vCPU quota.
-. Administrator Password: Provide a strong password for the administrator account.
+. Administrator Password: Use the administrator password from your Azure account.
 . Access Mode: For lab purposes we'll use Public access, but in production you should always plan for Private access with VNET peering.
 +
 image::aap-create-basics.png[Ansible Automation Platform on Azure - Basics]
@@ -126,7 +126,7 @@ After deployment, three (3) resource groups will be created:
 . In the Customer RG, locate the Managed Application resource.
 . Click Outputs and find the AAP Console URL.
 . Open the URL in your browser.
-. Log in with the admin credentials created during deployment.
+. Log in with the admin credentials from your Azure account.
 
 Once you have accessed the AAP console, you can perform any automation activities, much like you would with a self-managed installation.
 
